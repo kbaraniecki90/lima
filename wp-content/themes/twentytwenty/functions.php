@@ -31,6 +31,28 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+function bootstrapstarter_enqueue_styles() {
+  wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+  $dependencies = array('bootstrap');
+  wp_enqueue_style( 'bootstrapstarter-style', get_stylesheet_uri(), $dependencies ); 
+}
+
+function bootstrapstarter_enqueue_scripts() {
+  $dependencies = array('jquery');
+  wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '3.3.6', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_scripts' );
+
+function customcss_enqueue_scripts() {
+  wp_register_style('customcss', get_template_directory_uri() . '/dist/css/style.css' );
+  $dependencies = array('customcss');
+  wp_enqueue_style( 'customcss-scss', get_stylesheet_uri(), $dependencies ); 
+}
+add_action( 'wp_enqueue_scripts', 'customcss_enqueue_scripts' );
+
 function twentytwenty_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
@@ -381,6 +403,16 @@ function twentytwenty_sidebar_registration() {
 				'name'        => __( 'Footer #2', 'twentytwenty' ),
 				'id'          => 'sidebar-2',
 				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'twentytwenty' ),
+			)
+		)
+	);
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Slider', 'twentytwenty' ),
+				'id'          => 'slider',
+				'description' => __( ' Zdjęcia do slidera.', 'twentytwenty' ),
 			)
 		)
 	);

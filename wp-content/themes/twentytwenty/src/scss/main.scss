@@ -1,10 +1,5 @@
-body{
-    background-color: red;
-}
-h1{
-    color: pink !important;
-    font-size: 20px;
-    font-weight: bold;
-}
+@import 'base';
 
-@import 'base'
+@import './abstract/index';
+
+@import './sections/index'
