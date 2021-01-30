@@ -6,3 +6,35 @@ body {
   font-size: 1.6rem;
   font-family: $primaryFont;
 }
+
+p {
+  font-size: 1.6rem;
+  font-family: $secondaryFont;
+  color: $primary;
+  line-height: 2rem;
+  letter-spacing: 0.005em;
+}
+
+.double-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 3rem;
+  & * {
+    letter-spacing: -0.001em;
+    line-height: 3rem;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 3.4rem;
+  }
+  & span {
+    color: $primary;
+    font-weight: bold;
+  }
+  &-subtitle {
+    color: $primary;
+    top: -20px;
+    font-size: 5rem;
+    opacity: .1;
+  }
+}

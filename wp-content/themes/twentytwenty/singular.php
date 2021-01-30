@@ -21,9 +21,9 @@ get_header();
     $slide_second,
     $slide_third
   );
+
 ?>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  
+<div id="carouselExampleCaptions" class="carousel slide slider" data-bs-ride="carousel">
   <div class="carousel-inner slider-inner-wrapper">
 
     <?php foreach($slides as $k => $item) : ?>
@@ -39,9 +39,9 @@ get_header();
       <img src="<?= $image ?>" class="d-block w-100" alt="...">
       <div class="carousel-caption  slider-text-wrapper d-none d-md-block">
         <?php twentytwenty_site_logo(); ?>
-        <div class="slider-title-wrapper">
-          <span class="slider-sub-title position-absolute"><?= $text ?></span>
-          <h3 class="d-inline"><?= $text ?></h3>
+        <div class="double-heading">
+          <span class="double-heading-subtitle position-absolute"><?= $text ?></span>
+          <h3 class="double-heading-title d-inline"><?= $text ?></h3>
         </div>
       </div>
     </div>
@@ -49,29 +49,77 @@ get_header();
 
   </div>
   <div class="pagination-wrapper">
-    <a class="carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <ol class="carousel-indicators indicators">
-      <?php foreach($slides as $k => $item) : ?>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $k ?>" class="<?= $k == 0 ? "active" : "" ?>""></li>
-        <?php endforeach; ?>
-      </ol>
-      <a class="carousel-control-next carousel-control" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+    <button class="btn btn-primary pagination-button shadow"><?= $btn_text ?></button>
+    <div class="d-flex indicators-wrapper">
+      <a class="carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </a>
+      <ol class="carousel-indicators indicators">
+        <?php foreach($slides as $k => $item) : ?>
+          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $k ?>" class="<?= $k == 0 ? "active" : "" ?>""></li>
+          <?php endforeach; ?>
+        </ol>
+        <a class="carousel-control-next carousel-control" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+    </div>
   </div>
 </div>
 <main id="site-content" role="main">
-<div class="container">
-      <div class="row">
-        <div class="col-12">
+  <?php
+    $oppeningSectionTitle = get_field('section-title',get_the_ID());
+    $oppeningSection = get_field('section-content',get_the_ID());
+    $bigPhoto = $oppeningSection['big-picture']['url'];
+    $smallTopPhoto = $oppeningSection['small-top-picture']['url'];
+    $smallBottomPhoto = $oppeningSection['small-bottom-picture']['url'];
+
+    $test = get_categories();
+    print_r($test);
+  ?>
+     <ul>
+      <?php foreach (get_categories() as $cat) : ?>
+      <li>
+        <a href="<?= get_category_link($cat->term_id); ?>">
+          <?php z_taxonomy_image($cat->term_id); ?>
+          <?= $cat->cat_name; ?>
+        </a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+    <section>
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="double-heading">
+              <span class="double-heading-subtitle position-absolute"><?= $oppeningSectionTitle ?></span>
+              <h1 class="double-heading-title d-inline"><?= $oppeningSectionTitle ?></h1>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <?= $oppeningSection['tekst'] ?>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="squared-images">
+              <div class="shadow-sm squared-images-big" >
+                <img src="<?= $bigPhoto ?>"/>
+              </div>
+              <div class="shadow-sm squared-images-small-top" >
+                <img src="<?= $smallTopPhoto ?>"/>
+              </div>
+              <div class="shadow-sm squared-images-small-bottom" >
+                <img src="<?= $smallBottomPhoto ?>"/>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-</div>
-<?php the_content(); ?>
+    </section>
+        <?php the_content(); ?>
 <!-- 
 	< ?php
 

@@ -1,0 +1,40 @@
+.squared-images {
+  position: relative;
+  & > * {
+    position: absolute;
+    transform: rotate(45deg);
+    overflow: hidden;
+    border: 10px solid rgba(158, 151, 133, .9);
+    border-radius: $border-radius;
+  }
+  &-big {
+    top: 0;
+    left: 100px;
+    width: 280px;
+    height: 280px;
+    z-index: 3;
+    & img {
+      transform: rotate(-45deg) translateY(-150px);
+    }
+  }
+  &-small-top {
+    top: 0;
+    left: 385px;
+    width: 200px;
+    height: 200px;
+    z-index: 4;
+    & img {
+      transform: rotate(-45deg) translate(45px,-150px);
+    }
+  }
+  &-small-bottom {
+    top: 170px;
+    left: 40px;
+    width: 182px;
+    height: 182px;
+    z-index: 2;
+    & img {
+      transform: rotate(-45deg) translate(-65px,-110px)
+    }
+  }
+}

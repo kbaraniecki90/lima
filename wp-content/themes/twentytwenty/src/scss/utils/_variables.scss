@@ -1,0 +1,26 @@
+$primaryFont: 'Source Sans Pro', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+$primary: #707070;
+$black: #000000;
+
+$input-btn-padding-x: 3.1rem;
+$input-btn-padding-y: 1rem;
+
+$input-btn-font-size: 1.6rem;
+
+
+$box-shadow: 0 2px 6px rgba($black, .4);
+$box-shadow-sm: -6px 4px 12px rgba($black, .2);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1194px
+) !default;
+
+$grid-gutter-width: 3rem;
+
+$border-radius: 6px;
