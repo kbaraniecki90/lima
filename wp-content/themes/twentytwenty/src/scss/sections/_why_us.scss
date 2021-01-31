@@ -1,0 +1,23 @@
+.why-us {
+  & .double-heading {
+    margin-bottom: 10rem;
+  }
+  &-item {
+    & img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.3rem;
+    }
+  }
+  & h3 {
+    color: $black;
+    & span {
+      color: $primary;
+    }
+  }
+  &-under-section {
+    background-color: rgba(235, 231, 220, .8);
+    margin-right: 10rem;
+  }
+}

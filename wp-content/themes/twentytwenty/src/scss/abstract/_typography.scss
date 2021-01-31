@@ -7,6 +7,13 @@ body {
   font-family: $primaryFont;
 }
 
+h3 {
+  font-size: 2.5rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.001em;
+  color: $primary;
+}
+
 p {
   font-size: 1.6rem;
   font-family: $secondaryFont;
@@ -19,6 +26,11 @@ p {
   position: relative;
   z-index: 2;
   margin-bottom: 3rem;
+  &-right {
+    .double-heading-subtitle {
+      font-size: 4.7rem;
+    }
+  }
   & * {
     letter-spacing: -0.001em;
     line-height: 3rem;

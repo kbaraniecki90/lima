@@ -49,7 +49,7 @@ get_header();
 
   </div>
   <div class="pagination-wrapper">
-    <button class="btn btn-primary pagination-button shadow"><?= $btn_text ?></button>
+    <button class="btn btn-primary pagination-button rounded-0 shadow"><?= $btn_text ?></button>
     <div class="d-flex indicators-wrapper">
       <a class="carousel-control-prev carousel-control" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,27 +74,15 @@ get_header();
     $bigPhoto = $oppeningSection['big-picture']['url'];
     $smallTopPhoto = $oppeningSection['small-top-picture']['url'];
     $smallBottomPhoto = $oppeningSection['small-bottom-picture']['url'];
-
-    $test = get_categories();
-    print_r($test);
   ?>
-     <ul>
-      <?php foreach (get_categories() as $cat) : ?>
-      <li>
-        <a href="<?= get_category_link($cat->term_id); ?>">
-          <?php z_taxonomy_image($cat->term_id); ?>
-          <?= $cat->cat_name; ?>
-        </a>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-    <section>
-    <div class="container">
+
+    <section class="oppening">
+      <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="double-heading">
               <span class="double-heading-subtitle position-absolute"><?= $oppeningSectionTitle ?></span>
-              <h1 class="double-heading-title d-inline"><?= $oppeningSectionTitle ?></h1>
+              <h1 class="double-heading-title"><?= $oppeningSectionTitle ?></h1>
             </div>
           </div>
 
@@ -119,7 +107,90 @@ get_header();
         </div>
       </div>
     </section>
-        <?php the_content(); ?>
+
+    <section class="category-listing">
+    <?php
+      $args = array('child_of' => 6, 'hide_empty' => FALSE);
+      $categories = get_categories( $args );
+
+
+      $categoryListingTitle = get_field('category-section-title',get_the_ID());
+      $textUnderTitle = get_field('text-under-title',get_the_ID());
+    ?>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="double-heading double-heading-right mb-2">
+              <span class="double-heading-subtitle position-absolute end-0"><?= $categoryListingTitle ?></span>
+              <h2 class="double-heading-title w-100 text-end"><?= $categoryListingTitle ?></h2>
+            </div>
+            <div class="col-10 offset-xl-2">
+              <p class="mb-3 text-end"><?= $textUnderTitle ?></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid g-0">
+        <div class="row g-0">
+          <?php foreach ($categories as $cat) : ?>
+            <div class="col-2 g-0 category">
+              <a class="position-relative d-block w-100  category-item" href="<?= get_category_link($cat->term_id); ?>">
+                <?= z_taxonomy_image($cat->term_id); ?>
+                <div class="category-hovered-box d-flex flex-column position-absolute top-0 start-0 w-100 h-100 p-3">
+                  <h3 class="mb-3 text-white text-uppercase"><?= $cat->cat_name; ?></h3>
+                  <p class="text-white"><?= $cat->description; ?></p>
+                  <span class="mt-auto ms-auto text-white text-uppercase">Zobacz wiecej</span>
+                </div>
+              </a>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <?php
+        $whyUsTitle = get_field('why-us-title',get_the_ID());
+        $whyUsContent = get_field('why-us-content',get_the_ID());
+        $underContent = get_field('under-content',get_the_ID());
+        $icons = $underContent['icons']
+      ?>
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="double-heading">
+                  <span class="double-heading-subtitle position-absolute"><?= $whyUsTitle ?></span>
+                  <h2 class="double-heading-title"><?= $whyUsTitle ?></h2>
+                </div>
+            </div>
+          <?php foreach ($whyUsContent as $item) : ?>
+            <div class="col-3">
+                <div class="why-us-item">
+                  <img src="<?= $item['icon']['url'] ?>"/>
+                  <h3 class="mb-2"><?= $item['title'] ?></h3>
+                  <p><?= $item['description'] ?></p>
+                </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+        <div class="row mt-5 pt-5">
+          <div class="col-12">
+            <div class="d-flex justify-content-end " style="background-image: url(<?=$underContent['background-image']['url'] ?>)">
+              <div class="py-5 px-3 d-inline-block why-us-under-section">
+                <h3 class="mb-5 px-1 text-uppercase"><?=$underContent['text'] ?></h3>
+                <div class="d-flex justify-content-around mb-5">
+                <?php foreach ($icons as $icon) : ?>
+                    <img src="<?= $icon['url'] ?>"/>
+                  <?php endforeach; ?>
+                </div>
+                <button class="btn btn-primary ms-auto d-block rounded-0 shadow"><?= $btn_text ?></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php the_content(); ?>
 <!-- 
 	< ?php
 

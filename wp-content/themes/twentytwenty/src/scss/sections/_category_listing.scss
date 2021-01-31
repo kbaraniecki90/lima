@@ -1,0 +1,20 @@
+.category-listing {
+  margin-bottom: 9rem;
+}
+.category {
+  &-item {
+    & img {
+      width: 100%;
+    }
+    &:hover {
+      .category-hovered-box {
+        opacity: 1;
+      }
+    }
+  }
+  &-hovered-box {
+    @include transition;
+    opacity: 0;
+    background-color: rgba($purple-400, .8);
+  }
+}

@@ -4,6 +4,9 @@ $secondaryFont: 'Roboto', sans-serif;
 $primary: #707070;
 $black: #000000;
 
+$purple-400: #757E9E;
+
+
 $input-btn-padding-x: 3.1rem;
 $input-btn-padding-y: 1rem;
 
@@ -20,6 +23,17 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1194px
 ) !default;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+);
+
 
 $grid-gutter-width: 3rem;
 
