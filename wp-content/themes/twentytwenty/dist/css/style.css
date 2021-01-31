@@ -7418,6 +7418,8 @@ p {
   position: relative;
   z-index: 2;
   margin-bottom: 3rem; }
+  .double-heading-right .long-text {
+    width: 102%; }
   .double-heading-right .double-heading-subtitle {
     font-size: 4.7rem; }
   .double-heading * {
@@ -7467,6 +7469,48 @@ p {
     z-index: 2; }
     .squared-images-small-bottom img {
       transform: rotate(-45deg) translate(-65px, -110px); }
+
+.opinion-slider-inner-wrapper {
+  width: 50vw;
+  left: 0;
+  transform: translateX(-41%);
+  height: 388px;
+  background-position-x: -200px; }
+
+.opinion-slider-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 101%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1; }
+
+.opinion-slider-text-wrapper {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2; }
+  .opinion-slider-text-wrapper span {
+    width: 570px;
+    line-height: 2rem;
+    font-family: "Roboto", sans-serif; }
+  .opinion-slider-text-wrapper img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; }
+
+.opinions-pagination-wrapper {
+  width: 1194px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  padding-left: 7rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 4; }
 
 .slider {
   margin-bottom: 13.2rem; }
@@ -7562,22 +7606,21 @@ p {
     .category-hovered-box {
       transition: none; } }
 
-.why-us .double-heading {
+.why-us {
   margin-bottom: 10rem; }
-
-.why-us-item img {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1.3rem; }
-
-.why-us h3, .why-us .h3 {
-  color: #000000; }
-  .why-us h3 span, .why-us .h3 span {
-    color: #707070; }
-
-.why-us-under-section {
-  background-color: rgba(235, 231, 220, 0.8);
-  margin-right: 10rem; }
+  .why-us .double-heading {
+    margin-bottom: 10rem; }
+  .why-us-item img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.3rem; }
+  .why-us h3, .why-us .h3 {
+    color: #000000; }
+    .why-us h3 span, .why-us .h3 span {
+      color: #707070; }
+  .why-us-under-section {
+    background-color: rgba(235, 231, 220, 0.8);
+    margin-right: 10rem; }
 
 /*# sourceMappingURL=style.css.map*/

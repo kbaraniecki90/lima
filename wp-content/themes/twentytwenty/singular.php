@@ -190,6 +190,97 @@ get_header();
         </div>
       </div>
     </section>
+
+    <section>
+      <?php
+          $opinionsTitle = get_field('opinion-section-title',get_the_ID());
+          $underOpinionTitle = get_field('under-title-text',get_the_ID());
+          $opinionBg = get_field('opinions-background',get_the_ID());
+          $opinions = get_field('opinions',get_the_ID());
+        ?>
+        <div class="container">
+            <div class="row">
+              <div class="col-6">
+
+
+
+
+
+
+
+
+
+              <div id="opinionSlider" class="carousel slide slider opinion-slider" data-bs-ride="carousel">
+                <div
+                  class="carousel-inner opinion-slider-inner-wrapper"
+                  style="background-image: url(<?=$opinionBg['url'] ?>)">
+
+                  <?php foreach($opinions as $k => $opinion) : ?>
+                  <div class="carousel-item opinion-slider-item h-100 <?= $k == 'opinion' ? "active" : "" ?>">
+                    <div class="carousel-caption pt-5 opinion-slider-text-wrapper d-none d-md-flex align-items-center">
+                      <div class="d-flex flex-column align-items-end">
+                        <h3 class="mb-2 text-white"><?= $opinion['adviser']?></h3>
+                        <span class="text-end fst-italic"><?= $opinion['opinion-text']?></span>
+                      </div>
+                        <img class="d-block ms-3" src="<?= $opinion['picture']['url'] ?>"/>
+                    </div>
+                  </div>
+                  <?php endforeach; ?>
+
+                </div>
+                <div class=" opinions-pagination-wrapper mt-4">
+                  <div class="d-flex indicators-wrapper">
+                    <a class="carousel-control-prev carousel-control me-3" href="#opinionSlider" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next carousel-control" href="#opinionSlider" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+              <div class="col-6">
+                <div class="double-heading double-heading-right mb-2">
+                  <span class="double-heading-subtitle long-text position-absolute end-0"><?= $opinionsTitle ?></span>
+                  <h2 class="double-heading-title w-100 text-end"><?= $opinionsTitle ?></h2>
+                </div>
+                <p class="">
+                  <?= $underOpinionTitle ?>
+                </p>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section>
+      <?php 
+        $args = array( 'numberposts' => '1', 'category' => 7);
+        $lastAddedPost = wp_get_recent_posts( $args );
+
+
+        ?>
+
+
+
+
+    </section>
     <?php the_content(); ?>
 <!-- 
 	< ?php

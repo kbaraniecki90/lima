@@ -27,6 +27,9 @@ p {
   z-index: 2;
   margin-bottom: 3rem;
   &-right {
+    & .long-text {
+      width: 102%;
+    }
     .double-heading-subtitle {
       font-size: 4.7rem;
     }
