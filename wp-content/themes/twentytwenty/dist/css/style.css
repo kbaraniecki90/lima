@@ -4773,7 +4773,7 @@ textarea.form-control-lg {
   box-shadow: -6px 4px 12px rgba(0, 0, 0, 0.2) !important; }
 
 .shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
+  box-shadow: -4px 6px 10px rgba(0, 0, 0, 0.31) !important; }
 
 .shadow-none {
   box-shadow: none !important; }
@@ -7470,12 +7470,27 @@ p {
     .squared-images-small-bottom img {
       transform: rotate(-45deg) translate(-65px, -110px); }
 
+.opinion-slider-svg {
+  position: absolute;
+  top: 99px;
+  right: 619px;
+  z-index: 3; }
+
 .opinion-slider-inner-wrapper {
   width: 50vw;
   left: 0;
   transform: translateX(-41%);
   height: 388px;
   background-position-x: -200px; }
+  .opinion-slider-inner-wrapper::before {
+    position: absolute;
+    content: '';
+    top: 123px;
+    right: 116px;
+    width: 473px;
+    height: 2px;
+    background-color: #DDE0EB;
+    z-index: 3; }
 
 .opinion-slider-item::before {
   content: '';
@@ -7489,6 +7504,7 @@ p {
 
 .opinion-slider-text-wrapper {
   top: 50%;
+  left: 10%;
   transform: translateY(-50%);
   z-index: 2; }
   .opinion-slider-text-wrapper span {
@@ -7622,5 +7638,31 @@ p {
   .why-us-under-section {
     background-color: rgba(235, 231, 220, 0.8);
     margin-right: 10rem; }
+
+.last-post-date {
+  font-size: 1.28rem;
+  font-size: "Roboto", sans-serif; }
+
+.last-post-intro-text {
+  line-height: 2rem; }
+
+.last-post-svg {
+  position: absolute;
+  content: '';
+  top: 50px;
+  right: 60px; }
+
+.last-post-content {
+  position: relative;
+  padding-top: 10rem; }
+  .last-post-content::before {
+    position: absolute;
+    content: '';
+    top: 70px;
+    right: 140px;
+    width: 500px;
+    height: 2px;
+    background-color: #DDE0EB;
+    z-index: 3; }
 
 /*# sourceMappingURL=style.css.map*/

@@ -95,21 +95,48 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ "./wp-content/themes/twentytwenty/src/scss/main.scss");
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/SoftImage */ "./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js");
 
-console.log('test');
+document.addEventListener('DOMContentLoaded', function () {
+  window.softImages = [new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-big', 10), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-small-top', 15), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-small-bottom', 20)];
+});
 
 /***/ }),
 
-/***/ "./wp-content/themes/twentytwenty/src/scss/main.scss":
-/*!***********************************************************!*\
-  !*** ./wp-content/themes/twentytwenty/src/scss/main.scss ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js":
+/*!********************************************************************!*\
+  !*** ./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (class {
+  constructor(selector, shift = 25) {
+    this.shift = shift;
+    this.image = document.querySelector(selector);
+    this.wrapper = this.image;
+    this.height = window.innerHeight;
+
+    if (this.image) {
+      window.addEventListener('scroll', () => {
+        this.scrollHandler();
+      });
+    }
+  }
+
+  scrollHandler() {
+    let progress = this.image.getBoundingClientRect().top / this.height;
+    let shift = this.shift * progress + 'vh';
+    this.imageMove(shift);
+  }
+
+  imageMove(shift) {
+    this.wrapper.style.top = shift;
+  }
+
+});
 
 /***/ })
 

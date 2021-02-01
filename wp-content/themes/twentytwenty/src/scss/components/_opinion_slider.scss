@@ -1,10 +1,26 @@
 .opinion-slider {
+  &-svg {
+    position: absolute;
+    top: 99px;
+    right: 619px;
+    z-index: 3;
+  }
   &-inner-wrapper {
     width: 50vw;
     left: 0;
     transform: translateX(-41%);
     height: 388px;
     background-position-x: -200px;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 123px;
+      right: 116px;
+      width: 473px;
+      height: 2px;
+      background-color: #DDE0EB;
+      z-index: 3;
+    }
   }
   &-item {
     &::before {
@@ -14,12 +30,13 @@
       left: 0;
       height: 100%;
       width: 101%;
-      background-color: rgba($black, .7); 
+      background-color: rgba($black, .7);
       z-index: 1;
     }
   }
   &-text-wrapper {
     top: 50%;
+    left: 10%;
     transform: translateY(-50%);
     z-index: 2;
     & span {
