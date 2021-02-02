@@ -95,10 +95,13 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/SoftImage */ "./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ "./wp-content/themes/twentytwenty/src/scss/main.scss");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_SoftImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/SoftImage */ "./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js");
+
 
 document.addEventListener('DOMContentLoaded', function () {
-  window.softImages = [new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-big', 10), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-small-top', 15), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_0__["default"]('.squared-images-small-bottom', 20)];
+  window.softImages = [new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_1__["default"]('.squared-images-big', 10), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_1__["default"]('.squared-images-small-top', 15), new _modules_SoftImage__WEBPACK_IMPORTED_MODULE_1__["default"]('.squared-images-small-bottom', 20)];
 });
 
 /***/ }),
@@ -137,6 +140,17 @@ __webpack_require__.r(__webpack_exports__);
   }
 
 });
+
+/***/ }),
+
+/***/ "./wp-content/themes/twentytwenty/src/scss/main.scss":
+/*!***********************************************************!*\
+  !*** ./wp-content/themes/twentytwenty/src/scss/main.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

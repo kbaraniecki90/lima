@@ -1,0 +1,97 @@
+.input {
+	&-label {
+		width: 100%;
+	}
+	&-fake-label {
+		display: block;
+		transform: translate(1rem, -3rem);
+		color: $white;
+		transition: .3s ease;
+		line-height: 1.7rem;
+		letter-spacing: 0.03em;
+
+		@media (max-width: 640px) and (orientation: landscape) {
+			font-size: 1.2rem !important;
+		}
+	}
+
+	&-checkbox {
+		color: $primary;
+		font-size: 1.5rem;
+		letter-spacing: 0.03em;
+
+		&::after,
+		&::before {
+			top: .3rem;
+			left: -1rem;
+			width: 1.8rem;
+			height: 1.8rem;
+
+			@include media-breakpoint-up(sm) {
+				left: -3rem;
+			}
+
+			@include media-breakpoint-down(xs) {
+				left: -3rem;
+			}
+		}
+
+		&::before {
+			border-radius: .3rem;
+			border: .2rem solid $primary;
+			;
+		}
+	}
+  
+	&-input {
+    color: $white;
+    margin-top: 37px;
+    background-color: transparent;
+    outline: none;
+		border: none;
+		border-bottom: .2rem solid $white;
+    
+		&:focus {
+			border-bottom: .2rem solid $white;
+			box-shadow: none;
+		}
+
+		&:focus~.input-fake-label {
+			font-size: 1.7rem;
+			transform: translate(.1rem, .1rem);
+			color: rgba($primary, 1);
+
+		}
+
+		&:not(:placeholder-shown)~.input-fake-label {
+			font-size: 1.7rem;
+			transform: translate(.1rem, .1rem);
+			color: rgba($primary, 1);
+		}
+
+		&:not(:-ms-input-placeholder)~.input-fake-label {
+			font-size: 1.7rem;
+			transform: translate(.1rem, .1rem);
+			color: rgba($primary, 1);
+		}
+
+	}
+
+	&-submit {
+		&.btn {
+			margin-top: 0;
+		}
+
+		&:hover {
+			&~.input-hover-arrow {
+				&::before {
+					animation-play-state: running;
+				}
+			}
+		}
+	}
+}
+textarea.input-input {
+  max-height: 50px;
+  width: 100%;
+}

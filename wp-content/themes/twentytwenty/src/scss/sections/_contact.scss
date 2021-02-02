@@ -1,0 +1,57 @@
+.contact-form {
+  position: relative;
+  padding: 10rem 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($black, .6);
+    z-index: 1;
+  }
+  &-form {
+    position: relative;
+    z-index: 3;
+    padding: 5rem 9rem 5rem 0;
+  }
+  &-details {
+    position: relative;
+    z-index: 3;
+    padding: 10rem 0 10rem 10rem;
+  }
+  &-item {
+    font-size: 3.4rem;
+    margin-top: 6rem;
+    transition: .3s ease;
+    & a {
+      color: $white;
+    }
+    &:hover {
+      & a {
+        color: $primary;
+      }
+    }
+    & svg {
+      margin-right: 2.7rem;
+    }
+    &:last-child {
+      margin-top: 4.5rem;
+    }
+  }
+  &-content, &-details {
+    position: relative;
+    z-index: 3;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($black, .8);
+      z-index: -1;
+    }
+  }
+}

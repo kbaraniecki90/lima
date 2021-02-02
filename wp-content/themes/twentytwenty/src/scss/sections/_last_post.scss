@@ -1,8 +1,9 @@
 .last-post {
   margin-bottom: 10rem;
+
   &-date {
     font-size: 1.28rem;
-    font-size: $secondaryFont;
+    font-family: $secondaryFont;
   }
   &-intro-text {
     line-height: 2rem;

@@ -1,3 +1,4 @@
+import '../scss/main.scss'
 import SoftImage from './modules/SoftImage'
 
 
