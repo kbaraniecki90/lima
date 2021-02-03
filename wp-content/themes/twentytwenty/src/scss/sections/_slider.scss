@@ -2,7 +2,10 @@
   margin-bottom: 13.2rem;
   &-inner-wrapper {
     position: relative;
-    height: 803px;
+    height: 100vh;
+    @media (min-width: 1600px) {
+      height: 803px;
+    }
  
   }
   &-item {

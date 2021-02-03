@@ -1,25 +1,36 @@
 .opinion-slider {
   &-svg {
     position: absolute;
-    top: 99px;
-    right: 619px;
+    top: 79px;
+    right: 515px;
     z-index: 3;
+    @media (min-width: 1600px) {
+      top: 99px;
+      right: 619px;
+    }
   }
   &-inner-wrapper {
     width: 50vw;
     left: 0;
-    transform: translateX(-41%);
+    transform: translateX(-19%);
     height: 388px;
     background-position-x: -200px;
+    @media (min-width: 1600px) {
+      transform: translateX(-41%);
+    }
     &::before {
       position: absolute;
       content: '';
-      top: 123px;
-      right: 116px;
+      top: 103px;
+      right: 37px;
       width: 473px;
       height: 2px;
       background-color: #DDE0EB;
       z-index: 3;
+      @media (min-width: 1600px) {
+        top: 123px;
+        right: 116px;
+      }
     }
   }
   &-item {
@@ -36,13 +47,18 @@
   }
   &-text-wrapper {
     top: 50%;
-    left: 10%;
     transform: translateY(-50%);
     z-index: 2;
+    @media (min-width: 1600px) {
+      left: 10%;
+    }
     & span {
-      width: 570px;
+      width: 300px;
       line-height: 2rem;
       font-family: $secondaryFont;
+      @media (min-width: 1600px) {
+        width: 570px;
+      }
     }
     & img {
       width: 140px;
@@ -52,7 +68,7 @@
   }
 }
 .opinions-pagination-wrapper {
-  width: 1194px;
+  width: 625px;
   position: absolute;
   left: 50%;
   bottom: 50px;
@@ -62,4 +78,7 @@
   flex-direction: column;
   align-items: flex-start;
   z-index: 4;
+  @media (min-width: 1600px) {
+    width: 1194px;
+  }
 }

@@ -1,6 +1,7 @@
 .contact-form {
   position: relative;
   padding: 10rem 0;
+  background-size: cover;
   &::before {
     content: '';
     position: absolute;
@@ -17,9 +18,8 @@
     padding: 5rem 9rem 5rem 0;
   }
   &-details {
-    position: relative;
-    z-index: 3;
     padding: 10rem 0 10rem 10rem;
+    background-size: cover;
   }
   &-item {
     font-size: 3.4rem;
@@ -29,11 +29,17 @@
       color: $white;
     }
     &:hover {
+      & svg path {
+        fill: $primary;
+      }
       & a {
         color: $primary;
       }
     }
     & svg {
+      & path {
+        transition: .3s ease;
+      }
       margin-right: 2.7rem;
     }
     &:last-child {
@@ -53,5 +59,16 @@
       background-color: rgba($black, .8);
       z-index: -1;
     }
+  }
+}
+form.invalid,
+form.failed  {
+  .wpcf7-response-output {
+    position: relative;
+    top: 25px;
+    color: red;
+    margin-bottom: 0;
+    margin-top: 0;
+    border: none;
   }
 }

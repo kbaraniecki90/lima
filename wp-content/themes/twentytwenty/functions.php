@@ -33,18 +33,11 @@
  */
 
 
-
-function bootstrapstarter_enqueue_scripts() {
-  $dependencies = array('jquery');
-  wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '3.3.6', true );
-}
 function customjs_enqueue_scripts() {
   wp_enqueue_script('customjs', get_template_directory_uri().'/dist/js/main.js', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'customjs_enqueue_scripts' );
-
-add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_scripts' );
 
 function customcss_enqueue_scripts() {
   wp_register_style('customcss', get_template_directory_uri() . '/dist/css/style.css' );

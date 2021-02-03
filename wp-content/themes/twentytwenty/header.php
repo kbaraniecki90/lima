@@ -36,7 +36,7 @@
     $primaryNav = wp_get_nav_menu_items($menuID);
   ?>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg ">
     <div class="container">
     <?php twentytwenty_site_logo(); ?>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +44,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <?php foreach ( $primaryNav as $navItem ) : ?>
-          <a class="nav-link active" aria-current="page" href="<?= $navItem->url ?>"><?= $navItem->title ?></a>
+        <?php foreach ( $primaryNav as $k => $navItem ) : ?>
+          <a class="nav-link " aria-current="page" href="<?= $navItem->url ?>"><?= $navItem->title ?></a>
         <?php endforeach; ?>
         </div>
       </div>
