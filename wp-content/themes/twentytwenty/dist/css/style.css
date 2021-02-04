@@ -7524,6 +7524,9 @@ body {
   transform: translateX(-19%);
   height: 388px;
   background-position-x: -200px; }
+  @media (min-width: 1500px) {
+    .opinion-slider-inner-wrapper {
+      transform: translateX(-26%); } }
   @media (min-width: 1600px) {
     .opinion-slider-inner-wrapper {
       transform: translateX(-41%); } }
