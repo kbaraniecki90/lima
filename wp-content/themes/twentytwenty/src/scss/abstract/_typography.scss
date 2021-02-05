@@ -8,10 +8,14 @@ body {
 }
 
 h3 {
-  font-size: 2.5rem;
-  line-height: 3.6rem;
+  font-size: 2rem;
+  line-height: 3rem;
   letter-spacing: -0.001em;
   color: $primary;
+  @media (min-width: 1600px) {
+    font-size: 2.5rem;
+    line-height: 3.6rem;
+  }
 }
 
 p {
@@ -33,7 +37,10 @@ a {
       width: 102%;
     }
     .double-heading-subtitle {
-      font-size: 4.7rem;
+      font-size: 4.5rem;
+      @media (min-width: 1600px) {
+        font-size: 4.7rem;
+      }
     }
   }
   & * {

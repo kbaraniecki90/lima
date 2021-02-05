@@ -19,3 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
     offset: 50
   })
 })
+
+// Wyłączanie linków - usunąć przed zakończeniem prac nad stroną
+
+document.addEventListener('DOMContentLoaded', function () {
+	[...document.querySelectorAll('a:not([href*="#"])')]
+		.filter(e => !e.dataset.lightbox)
+		.forEach(el => el.setAttribute('href', '#!'))
+})

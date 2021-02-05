@@ -7,6 +7,9 @@
   box-shadow: 0 2px 6px rgba($black, .4);
   padding: 1rem 0;
   z-index: 5000;
+  &-nav {
+    justify-content: space-between;
+  }
   & .custom-logo-link {
     display: block;
     margin-right: 130px;
@@ -21,12 +24,5 @@
     letter-spacing: -0.001em;
     color: $white;
     font-weight: normal;
-    margin-right: 10rem;
-    &:last-child {
-      margin-right: 0;
-    }
-    @media (min-width: 1600px) {
-      margin-right: 11.5rem;
-    }
   }
 }

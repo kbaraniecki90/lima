@@ -136,10 +136,10 @@ get_header();
             <div class="col-12 col-xl-4 col-xxl-2 g-0 category">
               <a class="position-relative d-block w-100  category-item" href="<?= get_category_link($cat->term_id); ?>">
                 <?= z_taxonomy_image($cat->term_id); ?>
-                <div class="category-hovered-box d-flex flex-column position-absolute top-0 start-0 w-100 h-100 p-3">
+                <div class="category-hovered-box d-flex flex-column position-absolute top-0 start-0 w-100 h-100 p-3 pe-0">
                   <h3 class="mb-3 text-white text-uppercase"><?= $cat->cat_name; ?></h3>
                   <p class="text-white"><?= $cat->description; ?></p>
-                  <span class="mt-auto ms-auto text-white text-uppercase">Zobacz wiecej</span>
+                  <span class="mt-auto ms-auto text-white text-uppercase me-2">Zobacz wiecej</span>
                 </div>
               </a>
             </div>
@@ -154,7 +154,7 @@ get_header();
         $whyUsContent = get_field('why-us-content',get_the_ID());
         $underContent = get_field('under-content',get_the_ID());
         $icons = $underContent['icons']
-      ?>
+        ?>
       <div class="container">
         <div class="row">
             <div class="col-12">
@@ -166,6 +166,8 @@ get_header();
           <?php foreach ($whyUsContent as $item) : ?>
             <div class="col-3">
                 <div class="why-us-item">
+                <?php
+                  ?>
                   <img src="<?= $item['icon']['url'] ?>"/>
                   <h3 class="mb-2"><?= $item['title'] ?></h3>
                   <p><?= $item['description'] ?></p>
@@ -176,14 +178,14 @@ get_header();
         <div class="row mt-5 pt-5">
           <div class="col-12">
             <div class="d-flex justify-content-end " style="background-image: url(<?=$underContent['background-image']['url'] ?>)">
-              <div class="py-5 px-3 d-inline-block why-us-under-section">
+              <div class="py-5 px-3 d-flex flex-column why-us-under-section">
                 <h3 class="mb-5 px-1 text-uppercase"><?=$underContent['text'] ?></h3>
                 <div class="d-flex justify-content-around mb-5">
                 <?php foreach ($icons as $icon) : ?>
                     <img src="<?= $icon['url'] ?>"/>
                   <?php endforeach; ?>
                 </div>
-                <a href="#contactForm" class="btn btn-primary ms-auto d-block rounded-0 shadow"><?= $btn_text ?></a>
+                <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block rounded-0 shadow"><?= $btn_text ?></a>
               </div>
             </div>
           </div>
@@ -260,7 +262,7 @@ get_header();
                   <span class="double-heading-subtitle long-text position-absolute end-0"><?= $opinionsTitle ?></span>
                   <h2 class="double-heading-title w-100 text-end"><?= $opinionsTitle ?></h2>
                 </div>
-                <p>
+                <p class="text-end">
                   <?= $underOpinionTitle ?>
                 </p>
               </div>

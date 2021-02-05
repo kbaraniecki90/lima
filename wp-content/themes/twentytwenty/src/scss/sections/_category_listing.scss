@@ -3,18 +3,26 @@
 }
 .category {
   &-item {
+    overflow: hidden;
+    & h3 {
+      text-shadow: 0 0 25px rgba(0, 0, 0, 0.712);
+    }
     & img {
       width: 100%;
+      object-fit: cover;
     }
     &:hover {
       .category-hovered-box {
-        opacity: 1;
+        transform: translateY(0)
       }
     }
   }
   &-hovered-box {
     @include transition;
-    opacity: 0;
     background-color: rgba($purple-400, .8);
+    transform: translateY(85%);
+    @media (min-width: 1600px) {
+      transform: translateY(77%);
+    }
   }
 }

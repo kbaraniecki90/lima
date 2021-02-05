@@ -43,7 +43,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav w-100">
         <?php foreach ( $primaryNav as $k => $navItem ) : ?>
           <a class="nav-link " aria-current="page" href="<?= $navItem->url ?>"><?= $navItem->title ?></a>
         <?php endforeach; ?>
