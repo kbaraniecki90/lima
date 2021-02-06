@@ -7474,11 +7474,19 @@ body {
       width: 138px;
       height: 46px; }
   .navbar .nav-link {
+    position: relative;
     font-size: 2.5rem;
     line-height: 3.6rem;
     letter-spacing: -0.001em;
     color: #fff;
-    font-weight: normal; }
+    font-weight: normal;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .navbar .nav-link {
+        transition: none; } }
+    .navbar .nav-link:hover {
+      color: #000000;
+      opacity: 0.8; }
 
 .squared-images {
   position: relative; }
@@ -7790,7 +7798,7 @@ textarea.input-input {
   @media (prefers-reduced-motion: reduce) {
     .category-hovered-box {
       transition: none; } }
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
     .category-hovered-box {
       transform: translateY(80%); } }
   @media (min-width: 1600px) {

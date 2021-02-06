@@ -21,7 +21,7 @@
     @include transition;
     background-color: rgba($purple-400, .8);
     transform: translateY(85%);
-    @media (min-width: 1500px) {
+    @include media-breakpoint-up(xxl) {
       transform: translateY(80%);
     }
     @media (min-width: 1600px) {
