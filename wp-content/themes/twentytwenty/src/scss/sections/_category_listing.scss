@@ -21,6 +21,9 @@
     @include transition;
     background-color: rgba($purple-400, .8);
     transform: translateY(85%);
+    @media (min-width: 1500px) {
+      transform: translateY(80%);
+    }
     @media (min-width: 1600px) {
       transform: translateY(77%);
     }
