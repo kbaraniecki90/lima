@@ -110,9 +110,11 @@ get_header();
 
     <section class="category-listing">
     <?php
-      $args = array('child_of' => 6, 'hide_empty' => FALSE);
+      $args = array(
+        'child_of' => 6,
+        'orderby' => 'slug',
+        'hide_empty' => FALSE);
       $categories = get_categories( $args );
-
 
       $categoryListingTitle = get_field('category-section-title',get_the_ID());
       $textUnderTitle = get_field('text-under-title',get_the_ID());

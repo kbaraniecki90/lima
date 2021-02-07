@@ -15,7 +15,8 @@
     height: 280px;
     z-index: 3;
     & img {
-      transform: rotate(-45deg) translateY(-150px);
+      transform: rotate(-45deg) translate(-30px ,-150px);
+      width: 560px;
     }
   }
   &-small-top {
@@ -25,7 +26,8 @@
     height: 200px;
     z-index: 4;
     & img {
-      transform: rotate(-45deg) translate(45px,-150px);
+      transform: rotate(-45deg) translate(-80px, -330px);
+      width: 690px;
     }
   }
   &-small-bottom {
@@ -35,7 +37,8 @@
     height: 182px;
     z-index: 2;
     & img {
-      transform: rotate(-45deg) translate(-65px,-110px)
+      transform: rotate(-45deg) translate(35px, -110px);
+      width: 380px;
     }
   }
 }

@@ -7461,7 +7461,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #707070;
+  background-color: rgba(112, 112, 112, 0.8);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   padding: 1rem 0;
   z-index: 5000; }
@@ -7485,8 +7485,7 @@ body {
       .navbar .nav-link {
         transition: none; } }
     .navbar .nav-link:hover {
-      color: #000000;
-      opacity: 0.8; }
+      opacity: 0.6; }
 
 .squared-images {
   position: relative; }
@@ -7504,7 +7503,8 @@ body {
     height: 280px;
     z-index: 3; }
     .squared-images-big img {
-      transform: rotate(-45deg) translateY(-150px); }
+      transform: rotate(-45deg) translate(-30px, -150px);
+      width: 560px; }
   .squared-images-small-top {
     top: 0;
     left: 385px;
@@ -7512,7 +7512,8 @@ body {
     height: 200px;
     z-index: 4; }
     .squared-images-small-top img {
-      transform: rotate(-45deg) translate(45px, -150px); }
+      transform: rotate(-45deg) translate(-80px, -330px);
+      width: 690px; }
   .squared-images-small-bottom {
     top: 170px;
     left: 40px;
@@ -7520,7 +7521,8 @@ body {
     height: 182px;
     z-index: 2; }
     .squared-images-small-bottom img {
-      transform: rotate(-45deg) translate(-65px, -110px); }
+      transform: rotate(-45deg) translate(35px, -110px);
+      width: 380px; }
 
 .opinion-slider-svg {
   position: absolute;
@@ -7745,6 +7747,10 @@ textarea.input-input {
     @media (min-width: 1600px) {
       .indicators-wrapper {
         margin-top: 12.2rem; } }
+    .indicators-wrapper .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='707070'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+    .indicators-wrapper .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='707070'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); }
   .indicators li {
     width: 20px;
     height: 20px;
