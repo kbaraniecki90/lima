@@ -1,9 +1,13 @@
 html, body {
   overflow-x: hidden;
 }
-body {
-  padding-top: 3.3rem;
-}
 .screen-reader-text {
   display: none;
+}
+
+.custom-logo-link {
+  & img {
+    width: auto;
+    height: 102px;
+  }
 }

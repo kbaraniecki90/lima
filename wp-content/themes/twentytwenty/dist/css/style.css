@@ -7450,11 +7450,12 @@ a {
 html, body {
   overflow-x: hidden; }
 
-body {
-  padding-top: 3.3rem; }
-
 .screen-reader-text {
   display: none; }
+
+.custom-logo-link img {
+  width: auto;
+  height: 102px; }
 
 .navbar {
   position: fixed;
@@ -7471,7 +7472,7 @@ body {
     display: block;
     margin-right: 130px; }
     .navbar .custom-logo-link img {
-      width: 138px;
+      width: auto;
       height: 46px; }
   .navbar .nav-link {
     position: relative;

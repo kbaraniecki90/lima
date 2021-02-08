@@ -58,7 +58,6 @@ function twentytwenty_theme_support() {
 			'default-color' => 'f5efe0',
 		)
 	);
-
 	// Set content-width.
 	global $content_width;
 	if ( ! isset( $content_width ) ) {
@@ -82,21 +81,15 @@ function twentytwenty_theme_support() {
 	// Add custom image size used in Cover Template.
 	add_image_size( 'twentytwenty-fullscreen', 1980, 9999 );
 
-	// Custom logo.
-	$logo_width  = 120;
-	$logo_height = 90;
 
 	// If the retina setting is active, double the recommended width and height.
-	if ( get_theme_mod( 'retina_logo', false ) ) {
-		$logo_width  = floor( $logo_width * 2 );
-		$logo_height = floor( $logo_height * 2 );
-	}
+
 
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => $logo_height,
-			'width'       => $logo_width,
+			'height'      => 'auto',
+			'width'       => 'auto',
 			'flex-height' => true,
 			'flex-width'  => true,
 		)
