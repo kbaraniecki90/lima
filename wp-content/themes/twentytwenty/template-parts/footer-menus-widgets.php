@@ -8,15 +8,29 @@
  * @since Twenty Twenty 1.0
  */
 
-$has_footer_menu = has_nav_menu( 'footer' );
-$has_social_menu = has_nav_menu( 'social' );
-
-$has_sidebar_1 = is_active_sidebar( 'sidebar-1' );
-$has_sidebar_2 = is_active_sidebar( 'sidebar-2' );
+$isFooterForm = is_active_sidebar('footer-form');
 
 // Only output the container if there are elements to display.
 if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) {
 	?>
+			<?php if ( $isFooterForm ) { ?>
 
+				<aside class="footer-widgets-outer-wrapper" role="complementary">
+
+					<div class="footer-widgets-wrapper">
+
+						<?php if ( $has_footer_menu ) { ?>
+
+							<div class="footer-widgets column-one grid-item">
+								<?php dynamic_sidebar( 'footer-form' ); ?>
+							</div>
+
+						<?php } ?>
+
+					</div><!-- .footer-widgets-wrapper -->
+
+				</aside><!-- .footer-widgets-outer-wrapper -->
+
+			<?php } ?>
 
 <?php } ?>

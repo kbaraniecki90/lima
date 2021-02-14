@@ -46,6 +46,55 @@ function customcss_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'customcss_enqueue_scripts' );
 
+function my_register_additional_customizer_settings( $wp_customize ) {
+
+
+
+
+
+  $wp_customize->add_section( 'additional-info' , array(
+    'title'      => __( 'Dodatkowe informacje', 'mytheme' ),
+    'priority'   => 30,
+  ));
+
+  $wp_customize->add_setting(
+    'phone_number',
+    array(),
+);
+  $wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize,
+    'phone_number',
+    array(
+        'label'      => __( 'Numer telefonu', 'mytheme' ),
+        'description' => __( 'Numer telefonu wyświetlany na stronie', 'mytheme' ),
+        'settings'   => 'phone_number',
+        'priority'   => 10,
+        'section'    => 'additional-info',
+        'type'       => 'text',
+    )
+) );
+
+  $wp_customize->add_setting(
+      'adress_email',
+      array(),
+  );
+
+  $wp_customize->add_control( new WP_Customize_Control(
+      $wp_customize,
+      'adress_email',
+      array(
+          'label'      => __( 'Adres email', 'mytheme' ),
+          'description' => __( 'Adres email wyświetlany na stronie', 'mytheme' ),
+          'settings'   => 'adress_email',
+          'priority'   => 10,
+          'section'    => 'additional-info',
+          'type'       => 'text',
+      )
+  ) );
+}
+add_action( 'customize_register', 'my_register_additional_customizer_settings' );
+
+
 function twentytwenty_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.
@@ -374,39 +423,16 @@ function twentytwenty_sidebar_registration() {
 	);
 
 	// Footer #1.
-	register_sidebar(
-		array_merge(
-			$shared_args,
-			array(
-				'name'        => __( 'Footer #1', 'twentytwenty' ),
-				'id'          => 'sidebar-1',
-				'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'twentytwenty' ),
-			)
-		)
-	);
-
-	// Footer #2.
-	register_sidebar(
-		array_merge(
-			$shared_args,
-			array(
-				'name'        => __( 'Footer #2', 'twentytwenty' ),
-				'id'          => 'sidebar-2',
-				'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'twentytwenty' ),
-			)
-		)
-	);
-	register_sidebar(
-		array_merge(
-			$shared_args,
-			array(
-				'name'        => __( 'Slider', 'twentytwenty' ),
-				'id'          => 'slider',
-				'description' => __( ' Zdjęcia do slidera.', 'twentytwenty' ),
-			)
-		)
-	);
-
+        register_sidebar(
+          array_merge(
+            $shared_args,
+            array(
+              'name'        => __( 'Form', 'twentytwenty' ),
+              'id'          => 'footer-form',
+              'description' => __( 'Formularz.', 'twentytwenty' )
+            )// Footer #2.
+          )
+        );
 }
 
 add_action( 'widgets_init', 'twentytwenty_sidebar_registration' );
