@@ -47,11 +47,6 @@ function customcss_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'customcss_enqueue_scripts' );
 
 function my_register_additional_customizer_settings( $wp_customize ) {
-
-
-
-
-
   $wp_customize->add_section( 'additional-info' , array(
     'title'      => __( 'Dodatkowe informacje', 'mytheme' ),
     'priority'   => 30,
@@ -91,9 +86,59 @@ function my_register_additional_customizer_settings( $wp_customize ) {
           'type'       => 'text',
       )
   ) );
+
+
+  $wp_customize->add_setting('form_code', array());
+
+  $wp_customize->add_control( new WP_Customize_Control(
+      $wp_customize,
+      'form_code',
+      array(
+          'label'      => __( 'Skrócony kod formularza', 'mytheme' ),
+          'description' => __( 'Skrócony kod formularza', 'mytheme' ),
+          'settings'   => 'form_code',
+          'priority'   => 10,
+          'section'    => 'additional-info',
+          'type'       => 'text',
+      )
+  ) );
+
+  $wp_customize->add_setting(
+      'form_code',
+      array(),
+  );
+
+  $wp_customize->add_control( new WP_Customize_Control(
+      $wp_customize,
+      'form_code',
+      array(
+          'label'      => __( 'Skrócony kod formularza', 'mytheme' ),
+          'description' => __( 'Skrócony kod formularza', 'mytheme' ),
+          'settings'   => 'form_code',
+          'priority'   => 10,
+          'section'    => 'additional-info',
+          'type'       => 'text',
+      )
+  ) );
+
+
+  $wp_customize->add_setting('contact_section_bg', array());
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'contact_section_bg', array(
+      'label' => 'Wybierz zdjęcie w tle sekcji z formularzem',
+      'settings'  => 'contact_section_bg',
+      'section'   => 'additional-info'
+  ) ));
+
+  $wp_customize->add_setting('contact_form_bg', array());
+
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'contact_form_bg', array(
+      'label' => 'Wybierz zdjęcie w tle dla formularza',
+      'settings'  => 'contact_form_bg',
+      'section'   => 'additional-info'
+  ) ));
 }
 add_action( 'customize_register', 'my_register_additional_customizer_settings' );
-
 
 function twentytwenty_theme_support() {
 

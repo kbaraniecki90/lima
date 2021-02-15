@@ -1,20 +1,11 @@
-<?php
-  $background_images = get_field('background-images',get_the_ID());
-?>
-<section class="contact-form"  style="background-image: url(<?=$background_images['form-section-bg']['url'] ?>)">
-  <?php
-      $form = get_field('form_code',get_the_ID());
-      $phone = get_field('phone-number',get_the_ID());
-      $email = get_field('adress_email',get_the_ID());
-  ?>
+<section class="contact-form"  style="background-image: url(<?= get_theme_mod( 'contact_section_bg' ); ?>)">
   <div id="contactForm" class="container">
     <div class="row contact-form-content">
       <div class="col-6 ">
-        <div class="contact-form-details h-100" style="background-image: url(<?=$background_images['form-bg']['url'] ?>)">
-
+        <div class="contact-form-details h-100" style="background-image: url(<?= get_theme_mod( 'contact_form_bg' ); ?>)">
           <?php twentytwenty_site_logo(); ?>
           <div class="contact-form-item">
-            <a class=" text-decoration-none" href="tel:<?= $phone ?>">
+            <a class=" text-decoration-none" href="tel:<?= get_theme_mod( "phone_number" ); ?>">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
                 <defs>
                   <clipPath id="clip-path">
@@ -27,11 +18,11 @@
                   </g>
                 </g>
               </svg>
-              <?= $phone ?>
+              <?= get_theme_mod( "phone_number" ); ?>
             </a>
           </div>
           <div class="contact-form-item">
-            <a class=" text-decoration-none" href="mailto:<?= $email ?>">
+            <a class=" text-decoration-none" href="mailto:<?= get_theme_mod( "adress_email" ); ?>">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
                 <defs>
                   <clipPath id="clip-path">
@@ -46,18 +37,16 @@
                   </g>
                 </g>
               </svg>
-              <?= $email ?>
+              <?= get_theme_mod( "adress_email" ); ?>
             </a>
           </div>
         </div>
       </div>
       <div class="col-6">
         <div class="contact-form-form">
-
-          <?php echo do_shortcode( $form ); ?>
+          <?= do_shortcode( get_theme_mod( 'form_code' )); ?>
         </div>
       </div>
     </div>
   </div>
-
 </section>

@@ -32,9 +32,9 @@ get_header();
 
   <?= get_template_part( 'template-parts/components/home/last-blog-post' ); ?>
 
-  <?= get_template_part( 'template-parts/components/footer-form' ); ?>
 <?php endif; ?>
 
+  <?= get_template_part( 'template-parts/components/footer-form' ); ?>
 
 
 </main><!-- #site-content -->

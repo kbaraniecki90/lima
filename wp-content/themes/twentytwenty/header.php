@@ -35,8 +35,6 @@
     $menuID = $menuLocations['primary'];
     $primaryNav = wp_get_nav_menu_items($menuID);
 
-    echo get_theme_mod( "phone_number" );
-    echo get_theme_mod( "adress_email" );
   ?>
 
   <nav class="navbar navbar-expand-lg ">
