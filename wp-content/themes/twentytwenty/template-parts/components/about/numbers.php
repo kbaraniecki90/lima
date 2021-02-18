@@ -10,16 +10,24 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-xl-3">
-        <?= $average ?>
+        <div class="numbers-item">
+          <?= $average ?>
+        </div>
       </div>
       <div class="col-12 col-xl-3">
-        <?= $experience ?>
+        <div class="numbers-item">
+          <?= $experience ?>
+        </div>
       </div>
       <div class="col-12 col-xl-3">
-        <?= $realisations ?>
+        <div class="numbers-item">
+          <?= $realisations ?>
+        </div>
       </div>
       <div class="col-12 col-xl-3">
-        <?= $satisfied_customers ?>
+        <div class="numbers-item">
+          <?= $satisfied_customers ?>
+        </div>
       </div>
     </div>
   </div>

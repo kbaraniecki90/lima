@@ -37,7 +37,9 @@
           </div>
         </div>
       </div>
-
+      <div class="col-12">
+        <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block mt-2 rounded-0 shadow">Umów się na wizytę</a>
+      </div>
     </div>
   </div>
 </section>

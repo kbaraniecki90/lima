@@ -9226,4 +9226,37 @@ form.failed .wpcf7-response-output {
   margin-top: 0;
   border: none; }
 
+.numbers {
+  box-shadow: 1px 2px 24px 0px rgba(0, 0, 0, 0.75) inset;
+  padding: 3rem 0;
+  background-color: #9e9785; }
+  .numbers-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white; }
+    .numbers-item span {
+      font-weight: bold;
+      font-size: 4rem; }
+
+.features-item {
+  height: 300px; }
+
+.features-title {
+  font-size: 2rem;
+  position: relative; }
+  .features-title span {
+    color: #707070; }
+  .features-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background-color: #707070; }
+
 /*# sourceMappingURL=style.css.map*/

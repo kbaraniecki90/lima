@@ -20,10 +20,9 @@ get_header();
 
 <main id="site-content" role="main">
 
-<?php if ($pagetype == "about") : ?>
+<?php if ($pagetype != "home") : ?>
 
 <?= get_template_part( 'template-parts/components/entryPicture' ); ?>
-
 
 <?php endif; ?>
 
@@ -38,13 +37,25 @@ get_header();
 <?php if ($pagetype == "about") : ?>
 
   <?= get_template_part( 'template-parts/components/about/entry' ); ?>
-  
+
   <?= get_template_part( 'template-parts/components/about/numbers' ); ?>
+
+  <?= get_template_part( 'template-parts/components/about/features' ); ?>
+
+<?php endif; ?>
+
+<?php if ($pagetype == "contact") : ?>
+
+  <?= get_template_part( 'template-parts/components/contact/entry' ); ?>
 
 <?php endif; ?>
 
 
+<?php if ($pagetype == "home" || $pagetype == "about" ) : ?>
+
   <?= get_template_part( 'template-parts/components/home/opinions' ); ?>
+
+<?php endif; ?>
 
 <?php if ($pagetype == "home") : ?>
 
