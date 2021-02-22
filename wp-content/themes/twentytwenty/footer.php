@@ -1,6 +1,6 @@
 
 <footer class="">
-  HEJ
+  FOOTER
 </footer>
 <?php wp_footer(); ?>
 
