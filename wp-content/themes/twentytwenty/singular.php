@@ -44,6 +44,18 @@ get_header();
 
 <?php endif; ?>
 
+<?php if ($pagetype == "offer") : ?>
+
+  <?= get_template_part( 'template-parts/components/offer/listing' ); ?>
+
+<?php endif; ?>
+
+<?php if ($pagetype == "blog") : ?>
+
+  <?= get_template_part( 'template-parts/components/about/entry' ); ?>
+
+<?php endif; ?>
+
 <?php if ($pagetype == "contact") : ?>
 
   <?= get_template_part( 'template-parts/components/contact/entry' ); ?>

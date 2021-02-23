@@ -14,33 +14,31 @@ $readmore_limit = 557;
 $readmore_limit_reached = strlen(strip_tags($lastAddedPost['post_content'])) > $readmore_limit;
 
 ?>
-<div class="col-12 col-lg-4">
+<div class="col-12 col-lg-4 mb-2">
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-    <?php
+    <!-- < ?php
 
     get_template_part( 'template-parts/entry-header' );
 
-    if ( ! is_search() ) {
-      get_template_part( 'template-parts/featured-image' );
-    }
-
-    ?>
-    <div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
-
-      <div class="entry-content">
-
+    ?> -->
+    <a href="<?= esc_url( get_permalink()); ?>">
+      <div class="shadow position-relative post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
         <?php
-        if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
-          the_excerpt();
-        } else {
-          the_content( __( 'Continue reading', 'twentytwenty' ) );
-        }
+          if ( ! is_search() ) {
+            get_template_part( 'template-parts/featured-image' );
+          }
         ?>
-
-      </div><!-- .entry-content -->
-
-    </div><!-- .post-inner -->
+        <div class="position-absolute entry-title">
+          <?= the_title( '<h2 class=" heading-size-1">', '</h2>' );?>
+        </div>
+        <div class="position-absolute entry-content">
+          <?php
+            the_excerpt();
+          ?>
+        </div><!-- .entry-content -->
+      </div><!-- .post-inner -->
+    </a>
 
     <div class="section-inner">
       <?php
