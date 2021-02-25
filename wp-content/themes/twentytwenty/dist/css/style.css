@@ -9049,6 +9049,23 @@ textarea.input-input {
     -webkit-box-orient: vertical;
     overflow: hidden; }
 
+#realizations.nav.nav-tabs {
+  flex-wrap: nowrap; }
+  #realizations.nav.nav-tabs button {
+    padding: .5rem 2rem;
+    background-color: #707070;
+    color: white;
+    font-weight: bold;
+    transition: .3s ease;
+    border: none; }
+    #realizations.nav.nav-tabs button.active {
+      background-color: #9e9785; }
+  #realizations.nav.nav-tabs li:not(:last-child) {
+    margin-right: 1rem; }
+
+.tab-content {
+  padding-top: 5rem; }
+
 .slider {
   margin-bottom: 13.2rem; }
   .slider-inner-wrapper {

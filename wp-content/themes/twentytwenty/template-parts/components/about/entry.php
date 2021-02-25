@@ -1,9 +1,6 @@
 <?php
-  $pageTitle = get_field('page_title',get_the_ID());
-  $oppeningSectionTitle = get_field('section-title',get_the_ID());
-  $oppeningSection = get_field('section-content',get_the_ID());
-  $bigPhoto = $oppeningSection['big-picture']['url'];
-  $entryText = $oppeningSection['enter_text'];
+  $pageTitle = get_field('pageTitle',get_the_ID());
+  $oppeningSectionText = get_field('about-offer',get_the_ID());
 ?>
 
 <section class="oppening">

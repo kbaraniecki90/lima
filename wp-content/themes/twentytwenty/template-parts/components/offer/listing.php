@@ -5,33 +5,19 @@ $terms = get_terms( array(
   'hide_empty' => false,
 ) );
 ?>
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+<div class="container-fluid g-0">
+  <div class="row g-0">
+    <?php foreach ($terms as $cat) : ?>
+      <div class="col-12 col-xl-4 col-xxl-2 g-0 category">
+        <a class="position-relative d-block w-100  category-item" href="<?= get_category_link($cat); ?>">
+          <?= z_taxonomy_image($cat->term_id); ?>
+          <div class="category-hovered-box d-flex flex-column position-absolute top-0 start-0 w-100 h-100 p-3 pe-0">
+            <h3 class="mb-3 text-white text-uppercase"><?= $cat->name; ?></h3>
+            <p class="text-white pe-2"><?= $cat->description; ?></p>
+            <span class="mt-auto ms-auto text-white text-uppercase me-2">Zobacz wiecej</span>
+          </div>
+        </a>
       </div>
-
-
-      <?php foreach ($terms as $k => $cat) : ?>
-        <div class="row mb-5 <?= $k%2 == 0 ? "flex-row-reverse" : ''  ?>">
-          <div class="col-12 col-xl-4 col-xxl-5">
-            <div class="d-flex <?= $k%2 != 0 ? "justify-content-end" : ''  ?>">
-                <?= z_taxonomy_image($cat->term_id); ?>
-            </div>
-          </div>
-          <div class="col-12 col-xl-4 col-xxl-4">
-            <div class=" d-flex flex-column  p-3 pe-0">
-              <h3 class="mb-3 text-primary text-uppercase"><?= $cat->name; ?></h3>
-              <p class="text-primary pe-2"><?= $cat->description; ?></p>
-            </div>
-            <a class="position-relative d-block w-100 btn btn-primary bg-primary d-block rounded-0 shadow " href="<?= get_category_link($cat); ?>">
-              Zobacz więcej
-            </a>
-          </div>
-        </div>
-      <?php endforeach; ?>
-
-
-    </div>
+    <?php endforeach; ?>
   </div>
-</section>
+</div>
