@@ -81,6 +81,12 @@ get_header();
   <?= get_template_part( 'template-parts/components/home/last-blog-post' ); ?>
 
 <?php endif; ?>
+
+<?php if ($pagetype != "home") : ?>
+
+  <?= do_shortcode('[sc name="cta"]'); ?>
+
+<?php endif; ?>
   <?= do_shortcode('[sc name="contact-form"]'); ?>
 
 </main><!-- #site-content -->

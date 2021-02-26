@@ -67,6 +67,8 @@
                 while($loop->have_posts()) : $loop->the_post();
                   get_template_part( 'template-parts/content' );
                 endwhile;
+              } else {
+                echo '<h2>Nie ma realizacji w tej kategorii</h2>';
               }
             ?>
           </div>

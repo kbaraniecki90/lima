@@ -62,14 +62,14 @@ $readmore_limit_reached = strlen(strip_tags($lastAddedPost['post_content'])) > $
 
     </div><!-- .section-inner -->
 
-    <?php
+    <!-- < ?php
 
     if ( is_single() ) {
 
       get_template_part( 'template-parts/navigation' );
 
     }
-    ?>
+    ?> -->
 
   </article><!-- .post -->
 </div>
