@@ -1,7 +1,7 @@
 .featured-media {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   &::before {
     content: '';
     position: absolute;
@@ -14,7 +14,7 @@
   }
   & img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 .post-inner.thin {
@@ -42,4 +42,7 @@
       overflow: hidden;
     }
   }
+}
+.featured-media-inner {
+  height: 100%;
 }

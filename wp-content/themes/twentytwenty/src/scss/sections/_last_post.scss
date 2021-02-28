@@ -1,6 +1,8 @@
 .last-post {
   margin-bottom: 10rem;
-
+  & img {
+    width: 100%;
+  }
   &-date {
     font-size: 1.28rem;
     font-family: $secondaryFont;

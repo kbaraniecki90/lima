@@ -35,7 +35,7 @@
                 <img src="<?= $icon['url'] ?>"/>
               <?php endforeach; ?>
             </div>
-            <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block rounded-0 shadow"><?= $btn_text ?></a>
+            <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block rounded-0 shadow">UMÓW SIĘ NA DARMOWĄ WYCENĘ</a>
           </div>
         </div>
       </div>

@@ -50,6 +50,8 @@
             role="tabpanel"
             aria-labelledby="<?= $k ?>-tab"
           >
+          <div class="row">
+
             <?php 
               wp_reset_query();
               $args = array('post_type' => 'realizacje',
@@ -71,6 +73,8 @@
                 echo '<h2>Nie ma realizacji w tej kategorii</h2>';
               }
             ?>
+          </div>
+
           </div>
         <?php endforeach; ?>
         </div>

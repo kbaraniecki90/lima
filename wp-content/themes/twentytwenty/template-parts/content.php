@@ -22,8 +22,8 @@ $readmore_limit_reached = strlen(strip_tags($lastAddedPost['post_content'])) > $
     get_template_part( 'template-parts/entry-header' );
 
     ?> -->
-    <a href="<?= esc_url( get_permalink()); ?>">
-      <div class="shadow position-relative post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
+    <a class="d-block h-100" href="<?= esc_url( get_permalink()); ?>">
+      <div class="shadow position-relative post-inner h-100 <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
         <?php
           if ( ! is_search() ) {
             get_template_part( 'template-parts/featured-image' );

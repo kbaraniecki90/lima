@@ -82,7 +82,7 @@ get_header();
 
 <?php endif; ?>
 
-<?php if ($pagetype != "home") : ?>
+<?php if ($pagetype != "home" && $pagetype != "contact") : ?>
 
   <?= do_shortcode('[sc name="cta"]'); ?>
 

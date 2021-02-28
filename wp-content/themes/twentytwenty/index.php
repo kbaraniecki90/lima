@@ -47,4 +47,5 @@ get_header();
 	?>
 
 </main><!-- #site-content -->
+<?= do_shortcode('[sc name="cta"]'); ?>
 <?= do_shortcode('[sc name="contact-form"]'); ?>

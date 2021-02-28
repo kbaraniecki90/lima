@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-6">
 
-            <div id="opinionSlider" class="carousel slide slider opinion-slider" data-bs-ride="carousel">
+            <div id="opinionSlider" class="carousel slide  opinion-slider" data-bs-ride="carousel">
               <div
                 class="carousel-inner opinion-slider-inner-wrapper"
                 style="background-image: url(<?=$opinionBg['url'] ?>)">

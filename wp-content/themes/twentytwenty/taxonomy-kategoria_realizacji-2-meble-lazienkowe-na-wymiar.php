@@ -28,7 +28,6 @@ get_header();
 <section>
 <div class="container">
     <div class="row">
-      <div class="col-12 mb-2">
         <?php 
           wp_reset_query();
           $args = array('post_type' => 'realizacje',
@@ -51,7 +50,6 @@ get_header();
           }
         ?>
       </div>
-    </div>
   </div>
 </section>
 

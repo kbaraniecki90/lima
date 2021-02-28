@@ -32,5 +32,6 @@ get_header();
   </div>
 </main><!-- #site-content -->
 
+<?= do_shortcode('[sc name="cta"]'); ?>
 
 <?= do_shortcode('[sc name="contact-form"]'); ?>

@@ -2,6 +2,15 @@
   margin-bottom: 9rem;
 }
 .category {
+  &:nth-child(1) {
+    order: 6;
+  }
+  &:nth-child(2) {
+    order: 5;
+  }
+  &:nth-child(3) {
+    order: 4;
+  }
   &-item {
     overflow: hidden;
     & h3 {
