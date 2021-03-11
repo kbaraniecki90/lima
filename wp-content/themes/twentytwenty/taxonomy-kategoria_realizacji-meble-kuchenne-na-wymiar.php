@@ -18,8 +18,8 @@ get_header();
     <div class="row">
       <div class="col-12 mb-2">
         <div class="double-heading">
-          <span class="double-heading-subtitle position-absolute"><?= 'Meble do salonu na wymiar' ?></span>
-          <h1 class="double-heading-title"><?= 'Meble do salonu na wymiar' ?></h1>
+          <span class="double-heading-subtitle position-absolute"><?= 'Meble kuchenne na wymiar' ?></span>
+          <h1 class="double-heading-title"><?= 'Meble kuchenne na wymiar' ?></h1>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@ get_header();
                   array(
                       'taxonomy' => 'kategoria_realizacji',
                       'field' => 'slug',
-                      'terms' => '4-meble-do-salonu-na-wymiar',
+                      'terms' => 'meble-kuchenne-na-wymiar',
                   ),
               ),
           );

@@ -35,7 +35,7 @@ get_header();
                   array(
                       'taxonomy' => 'kategoria_realizacji',
                       'field' => 'slug',
-                      'terms' => '5-meble-biurowe-na-wymiar',
+                      'terms' => 'meble-biurowe-na-wymiar',
                   ),
               ),
           );
