@@ -6,7 +6,7 @@
     'hide_empty' => false,
   ));
 ?>
-<section class="oppening">
+<section class="oppening mb-2 mb-lg-9">
   <div class="container">
     <div class="row">
       <div class="col-12 mb-2">
@@ -25,9 +25,9 @@
         <ul class="nav nav-tabs tab" id="realizations" role="tablist">
           <?php foreach ($terms as $k => $cat) : ?>
 
-            <li class="nav-item tab-item" role="presentation">
+            <li class="nav-item tab-item mb-1 mb-lg-0" role="presentation">
               <button
-                class="nav-link <?= $k == 0 ? "active" : "" ?>"
+                class="nav-link w-100 <?= $k == 0 ? "active" : "" ?>"
                 id="<?= $k ?>-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#tab<?= $k ?>"

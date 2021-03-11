@@ -8757,6 +8757,20 @@ html, body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   padding: 1rem 0;
   z-index: 5000; }
+  .navbar.navbar-light .nav-link {
+    color: #fff; }
+  .navbar.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease-in-out; }
+    .navbar.navbar-light .navbar-toggler:focus {
+      box-shadow: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .navbar.navbar-light .navbar-toggler {
+        transition: none; } }
+    .navbar.navbar-light .navbar-toggler:not(.collapsed) {
+      background-color: white; }
   .navbar-nav {
     justify-content: space-between; }
   .navbar .custom-logo-link {
@@ -8770,14 +8784,18 @@ html, body {
     font-size: 2.5rem;
     line-height: 3.6rem;
     letter-spacing: -0.001em;
-    color: #fff;
     font-weight: normal;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out; }
     @media (prefers-reduced-motion: reduce) {
       .navbar .nav-link {
         transition: none; } }
-    .navbar .nav-link:hover {
-      opacity: 0.6; }
+    @media (min-width: 992px) {
+      .navbar .nav-link {
+        text-shadow: none; } }
+    @media (min-width: 1200px) {
+      .navbar .nav-link:hover {
+        opacity: 0.6; } }
 
 .squared-images {
   position: relative; }
@@ -9048,10 +9066,14 @@ textarea.input-input {
   position: relative;
   display: flex;
   width: 100%;
-  height: 150px;
-  margin-bottom: 10rem;
+  height: 200px;
+  margin-bottom: 5rem;
   background-size: cover;
   background-position-y: 50%; }
+  @media (min-width: 992px) {
+    .entry-picture {
+      height: 150px;
+      margin-bottom: 10rem; } }
   .entry-picture::before {
     content: '';
     position: absolute;
@@ -9117,7 +9139,13 @@ textarea.input-input {
   height: 100%; }
 
 #realizations.nav.nav-tabs {
-  flex-wrap: nowrap; }
+  justify-content: space-between; }
+  @media (max-width: 991.98px) {
+    #realizations.nav.nav-tabs {
+      border-bottom: none; } }
+  @media (min-width: 992px) {
+    #realizations.nav.nav-tabs {
+      flex-wrap: nowrap; } }
   #realizations.nav.nav-tabs button {
     padding: .5rem 2rem;
     background-color: #707070;
@@ -9127,8 +9155,17 @@ textarea.input-input {
     border: none; }
     #realizations.nav.nav-tabs button.active {
       background-color: #9e9785; }
-  #realizations.nav.nav-tabs li:not(:last-child) {
-    margin-right: 1rem; }
+  #realizations.nav.nav-tabs .nav-item.tab-item {
+    width: 100%; }
+    @media (min-width: 768px) {
+      #realizations.nav.nav-tabs .nav-item.tab-item {
+        width: 48%; } }
+    @media (min-width: 992px) {
+      #realizations.nav.nav-tabs .nav-item.tab-item {
+        width: auto; } }
+  @media (min-width: 992px) {
+    #realizations.nav.nav-tabs li:not(:last-child) {
+      margin-right: 1rem; } }
 
 article.realizacje {
   height: 100%; }
@@ -9237,7 +9274,10 @@ article.realizacje {
 
 .cta {
   position: relative;
-  padding: 8rem 0; }
+  padding: 4rem 0; }
+  @media (min-width: 992px) {
+    .cta {
+      padding: 8rem 0; } }
   .cta::before {
     content: '';
     position: absolute;
@@ -9257,9 +9297,12 @@ article.realizacje {
     color: #9e9785;
     margin-bottom: 5rem; }
   .cta p {
-    line-height: 3rem;
+    line-height: 2.5rem;
     color: #fff;
     margin-bottom: 5rem; }
+    @media (min-width: 992px) {
+      .cta p {
+        line-height: 3rem; } }
 
 .slider {
   margin-bottom: 5rem; }
@@ -9404,8 +9447,14 @@ article.realizacje {
       text-shadow: 0 0 25px rgba(0, 0, 0, 0.712); }
     .category-item img {
       width: 100%;
-      height: 400px;
+      height: 300px;
       object-fit: cover; }
+      @media (min-width: 768px) {
+        .category-item img {
+          height: 350px; } }
+      @media (min-width: 992px) {
+        .category-item img {
+          height: 400px; } }
       @media (min-width: 1200px) {
         .category-item img {
           height: 500px; } }
@@ -9525,6 +9574,9 @@ article.realizacje {
   .contact-form-details {
     background-size: cover;
     padding: 4rem 0 0 0; }
+    @media (min-width: 768px) {
+      .contact-form-details {
+        padding: 8rem 0 0 0; } }
     @media (min-width: 992px) {
       .contact-form-details {
         padding: 10rem 0 10rem 2rem; } }
@@ -9600,7 +9652,10 @@ form.failed .wpcf7-response-output {
       font-size: 4rem; }
 
 .features-item {
-  height: 300px; }
+  height: 250px; }
+  @media (min-width: 768px) {
+    .features-item {
+      height: 300px; } }
 
 .features-title {
   font-size: 2rem;

@@ -24,7 +24,7 @@ get_header();
   echo '<div class="container">';
   echo '<div class="row">';
   ?>
-  <div class="col-12 mb-10">
+  <div class="col-12 mb-5 mb-lg-10">
     <div class="double-heading">
       <span class="double-heading-subtitle position-absolute"><?= $pageTitle ?></span>
       <h1 class="double-heading-title"><?= $pageTitle ?></h1>

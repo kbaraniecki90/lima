@@ -25,6 +25,9 @@
   &-details {
     background-size: cover;
     padding: 4rem 0 0 0;
+    @include media-breakpoint-up(md) {
+      padding: 8rem 0 0 0;
+    }
     @include media-breakpoint-up (lg) {
       padding: 10rem 0 10rem 2rem;
     }

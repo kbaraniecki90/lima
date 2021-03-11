@@ -14,7 +14,7 @@ $readmore_limit = 557;
 $readmore_limit_reached = strlen(strip_tags($lastAddedPost['post_content'])) > $readmore_limit;
 
 ?>
-<div class="col-12 col-lg-4 mb-2">
+<div class="col-12 col-md-6 col-lg-4 mb-2">
   <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
     <!-- < ?php

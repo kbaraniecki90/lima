@@ -14,7 +14,7 @@
           <h1 class="double-heading-title"><?= $pageTitle ?></h1>
         </div>
       </div>
-      <div class="col-12 text-center mb-10">
+      <div class="col-12 text-center mb-5 mb-lg-10">
 
         <?= $entryText ?>
       </div>
@@ -29,14 +29,14 @@
         <?= $oppeningSection['tekst'] ?>
       </div>
 
-      <div class="col-12 col-lg-5">
+      <div class="col-12 col-lg-5 order-1 order-lg-0">
         <div class="squared-images">
           <div class="shadow-sm squared-images-big" >
             <img src="<?= $bigPhoto ?>"/>
           </div>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-12 mb-4 mb-lg-0">
         <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block mt-2 rounded-0 shadow">Umów się na wizytę</a>
       </div>
     </div>
