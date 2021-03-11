@@ -14,7 +14,7 @@
             </div>
         </div>
       <?php foreach ($whyUsContent as $item) : ?>
-        <div class="col-3">
+        <div class="col-12 col-md-6 col-lg-3">
             <div class="why-us-item">
             <?php
               ?>
@@ -25,17 +25,17 @@
         </div>
       <?php endforeach; ?>
     </div>
-    <div class="row mt-5 pt-5">
+    <div class="row mt-5 pt-xl-5">
       <div class="col-12">
         <div class="d-flex justify-content-end " style="background-image: url(<?=$underContent['background-image']['url'] ?>)">
-          <div class="py-5 px-3 d-flex flex-column why-us-under-section">
-            <h3 class="mb-5 px-1 text-uppercase"><?=$underContent['text'] ?></h3>
+          <div class="py-5 px-lg-3 d-flex flex-column why-us-under-section">
+            <h3 class="mb-5 px-1 text-uppercase text-center text-xl-start"><?=$underContent['text'] ?></h3>
             <div class="d-flex justify-content-around mb-5">
             <?php foreach ($icons as $icon) : ?>
                 <img src="<?= $icon['url'] ?>"/>
               <?php endforeach; ?>
             </div>
-            <a href="#contactForm" class="btn btn-primary ms-auto d-inline-block rounded-0 shadow">UMÓW SIĘ NA DARMOWĄ WYCENĘ</a>
+            <a href="#contactForm" class="btn btn-primary mx-auto ms-lg-auto d-inline-block rounded-0 shadow">UMÓW SIĘ NA DARMOWĄ WYCENĘ</a>
           </div>
         </div>
       </div>

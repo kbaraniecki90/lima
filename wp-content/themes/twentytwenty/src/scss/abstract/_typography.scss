@@ -58,7 +58,10 @@ a {
   &-subtitle {
     color: $primary;
     top: -20px;
-    font-size: 5rem;
+    font-size: 3rem;
     opacity: .1;
+    @include media-breakpoint-up (lg) {
+      font-size: 5rem;
+    }
   }
 }

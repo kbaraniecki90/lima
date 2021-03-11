@@ -1,9 +1,16 @@
 .why-us {
   margin-bottom: 10rem;
   & .double-heading {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+    @include media-breakpoint-up (lg) {
+      margin-bottom: 10rem;
+    }
   }
   &-item {
+    margin-bottom: 3rem;
+    @include media-breakpoint-up (lg) {
+      margin-bottom: 0;
+    }
     & img {
       display: block;
       width: 60px;
@@ -19,6 +26,12 @@
   }
   &-under-section {
     background-color: rgba(235, 231, 220, .8);
-    margin-right: 10rem;
+    width: 100%;
+    @include media-breakpoint-up (xl) {
+      margin-right: 10rem;
+    }
+    @include media-breakpoint-up (xl) {
+      width: auto;
+    }
   }
 }

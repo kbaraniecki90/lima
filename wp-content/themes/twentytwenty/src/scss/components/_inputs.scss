@@ -64,11 +64,15 @@
 	}
 	&-input {
     color: $white;
+    width: 100%;
     margin-top: 20px;
     background-color: transparent;
     outline: none;
 		border: none;
 		border-bottom: .2rem solid $white;
+    @include media-breakpoint-up (lg) {
+      width: auto;
+    }
 		&:focus {
 			border-bottom: .2rem solid $white;
 			box-shadow: none;
@@ -115,7 +119,13 @@ textarea.input-input {
 }
 .wpcf7-not-valid-tip {
   position: absolute;
-  left: 30%;
+  left: 55%;
+  font-size: .9em;
+  line-height: 1.5rem;
+  @include media-breakpoint-up (lg) {
+    left: 30%;
+    font-size: 1em;
+  }
 }
 .input-checkbox {
   .wpcf7-not-valid-tip {

@@ -1,4 +1,4 @@
-<section>
+<section class="mb-md-5 mb-lg-0">
   <?php
       $opinionsTitle = get_field('opinion-section-title',get_the_ID());
       $underOpinionTitle = get_field('under-title-text',get_the_ID());
@@ -7,7 +7,7 @@
     ?>
     <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-lg-6 order-2 order-lg-0 d-block d-lg-block">
 
             <div id="opinionSlider" class="carousel slide  opinion-slider" data-bs-ride="carousel">
               <div
@@ -35,12 +35,12 @@
                 </svg>
                 <?php foreach($opinions as $k => $opinion) : ?>
                 <div class="carousel-item opinion-slider-item h-100 <?= $k == 'opinion' ? "active" : "" ?>">
-                  <div class="carousel-caption pt-5 opinion-slider-text-wrapper d-none d-md-flex align-items-center">
+                  <div class="carousel-caption pt-5 opinion-slider-text-wrapper d-nonea d-md-flex align-items-center">
                     <div class="d-flex flex-column align-items-end">
                       <h3 class="mb-2 text-white"><?= $opinion['adviser']?></h3>
                       <span class="text-end fst-italic"><?= $opinion['opinion-text']?></span>
                     </div>
-                      <img class="d-block ms-3" src="<?= $opinion['picture']['url'] ?>"/>
+                      <img class="d-none d-xl-block ms-3" src="<?= $opinion['picture']['url'] ?>"/>
                   </div>
                 </div>
                 <?php endforeach; ?>
@@ -62,7 +62,7 @@
 
 
           </div>
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="double-heading double-heading-right mb-2">
               <span class="double-heading-subtitle long-text position-absolute end-0"><?= $opinionsTitle ?></span>
               <h2 class="double-heading-title w-100 text-end"><?= $opinionsTitle ?></h2>

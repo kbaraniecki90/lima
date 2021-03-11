@@ -4,6 +4,9 @@
     top: 79px;
     right: 515px;
     z-index: 3;
+    @include media-breakpoint-only(md) {
+      top: 30px;
+    }
     @media (min-width: 1600px) {
       top: 99px;
       right: 619px;
@@ -11,11 +14,15 @@
   }
   &-inner-wrapper {
     position: relative;
-    width: 50vw;
-    left: 0;
-    transform: translateX(-19%);
-    height: 388px;
+    height: 290px;
     background-position-x: -200px;
+    transform: translateX(0);
+    @include media-breakpoint-up (lg) {
+      height: 388px;
+      width: 50vw;
+      left: 0;
+      transform: translateX(-19%);
+    }
     &::after {
       content: '';
       position: absolute;
@@ -35,41 +42,44 @@
     &::before {
       position: absolute;
       content: '';
-      top: 103px;
-      right: 37px;
+      top: 53px;
+      right: 17px;
       width: 473px;
       height: 2px;
       background-color: #DDE0EB;
       z-index: 3;
+      @include media-breakpoint-up (lg) {
+        right: 37px;
+        top: 103px;
+      }
       @media (min-width: 1600px) {
         top: 123px;
         right: 116px;
       }
     }
   }
-  &-item {
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 101%;
-    //   background-color: rgba($black, .7);
-    //   z-index: 1;
-    // }
-  }
   &-text-wrapper {
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 2;
+    bottom: -3.75rem;
+    left: 5%;
+    right: 5%;
+    @include media-breakpoint-up (lg) {
+      top: 50%;
+      bottom: 1.75rem;
+      left: 15%;
+      right: 15%;
+    }
     @media (min-width: 1600px) {
       left: 10%;
     }
     & span {
-      width: 300px;
       line-height: 2rem;
       font-family: $secondaryFont;
+      @include media-breakpoint-up (lg) {
+        width: 300px;
+      }
       @media (min-width: 1600px) {
         width: 570px;
       }
@@ -82,20 +92,29 @@
   }
 }
 .opinions-pagination-wrapper {
-  width: 625px;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  padding-left: 7rem;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 4;
+  display: none;
+  @include media-breakpoint-up (lg) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    padding-left: 7rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 4;
+  }
   @media (min-width: 1600px) {
     width: 1194px;
   }
 }
 body.home #opinionSlider {
-  margin-bottom: 13.2rem;
+  margin-bottom: 4rem;
+  @include media-breakpoint-up (lg) {
+    margin-bottom: 9rem;
+  }
+  @include media-breakpoint-up (xl) {
+    margin-bottom: 13.2rem;
+  }
 }

@@ -28,11 +28,11 @@
             </div>
             <p class="mb-3"><?= $underBlogTitleText ?></p>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <img class="shadow-lg" src="<?= $photoPost ?>"/>
         </div>
-        <div class="col-6">
-          <div class="ms-5 last-post-content">
+        <div class="col-12 col-lg-6">
+          <div class="ms-lg-5 last-post-content">
             <svg class="last-post-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
               <defs>
                 <clipPath id="clip-path">

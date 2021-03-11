@@ -24,7 +24,7 @@
     ?>
     <div class="carousel-item slider-item <?= $k == 0 ? "active" : "" ?>">
       <img src="<?= $image ?>" class="d-block w-100 h-100" alt="...">
-      <div class="carousel-caption  slider-text-wrapper d-none d-md-block">
+      <div class="carousel-caption  slider-text-wrapper d-md-block">
         <?php twentytwenty_site_logo(); ?>
         <div class="double-heading">
           <span class="double-heading-subtitle position-absolute"><?= $text ?></span>

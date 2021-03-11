@@ -1,5 +1,8 @@
 .slider {
-  margin-bottom: 13.2rem;
+  margin-bottom: 5rem;
+  @include media-breakpoint-up (lg) {
+    margin-bottom: 13.2rem;
+  }
   &-inner-wrapper {
     position: relative;
     height: 100vh;
@@ -17,7 +20,7 @@
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 1px;
       left: 0;
       height: 100%;
       width: 100%;
@@ -26,13 +29,27 @@
     }
   }
   &-text-wrapper {
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
     z-index: 2;
+    bottom: 20rem;
+    @include media-breakpoint-up(md) {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    @include media-breakpoint-up(lg) {
+      top: 100px;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, 50%);
+    }
+    @include media-breakpoint-up(xl) {
+      bottom: 1.25rem;
+      transform: translateX(-50%);
+    }
     & .site-logo {
-      margin-bottom: 15rem;
+      margin-bottom: 7rem;
+      @include media-breakpoint-up (xl) {
+        margin-bottom: 15rem;
+      }
     }
   }
   & .double-heading {
@@ -41,10 +58,17 @@
     }
     &-title {
       font-weight: normal;
-      font-size: 5rem;
+      font-size: 4rem;
+
+      @include media-breakpoint-up (lg) {
+        font-size: 5rem;
+      }
     }
     &-subtitle {
-      font-size: 5.6rem;
+      font-size: 3.6rem;
+      @include media-breakpoint-up (lg) {
+        font-size: 5.6rem;
+      }
     }
   }
 }
@@ -89,18 +113,25 @@
   }
 }
 .pagination-wrapper {
-  width: 1194px;
+  width: 100%;
+  align-items: center;
+
   position: absolute;
   bottom: 97px;
   left: 50%;
-  padding-left: 10rem;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   z-index: 4;
+  @include media-breakpoint-up (lg) {
+    width: 1194px;
+    padding-left: 10rem;
+    align-items: flex-start;
+  }
   & .pagination-button {
-    margin-left: auto;
-    margin-right: 11rem;
+    @include media-breakpoint-up (lg) {
+      margin-left: auto;
+      margin-right: 11rem;
+    }
   }
 }

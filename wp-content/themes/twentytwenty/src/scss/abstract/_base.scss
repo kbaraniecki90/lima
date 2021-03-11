@@ -7,7 +7,10 @@ html, body {
 
 .custom-logo-link {
   & img {
-    width: auto;
-    height: 102px;
+    width: 200px;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      height: 102px;
+    }
   }
 }

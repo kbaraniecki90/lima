@@ -1,7 +1,9 @@
 .contact-form {
   position: relative;
-  padding: 10rem 0;
   background-size: cover;
+  @include media-breakpoint-up (lg) {
+    padding: 10rem 0;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -15,16 +17,28 @@
   &-form {
     position: relative;
     z-index: 3;
-    padding: 5rem 9rem 5rem 0;
+    padding: 4rem 0;
+    @include media-breakpoint-up (lg) {
+      padding: 5rem 9rem 5rem 0;
+    }
   }
   &-details {
-    padding: 10rem 0 10rem 10rem;
     background-size: cover;
+    padding: 4rem 0 0 0;
+    @include media-breakpoint-up (lg) {
+      padding: 10rem 0 10rem 2rem;
+    }
+    @include media-breakpoint-up (xl) {
+      padding-left:10rem;
+    }
   }
   &-item {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
     margin-top: 6rem;
     transition: .3s ease;
+    @include media-breakpoint-up (lg) {
+      font-size: 3.4rem;
+    }
     & a {
       color: $white;
     }
