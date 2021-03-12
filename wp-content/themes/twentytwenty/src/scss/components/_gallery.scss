@@ -4,9 +4,15 @@
     background-color: transparent;
     outline: none;
     border: none;
-    top: 50%;
+    top: 90%;
     transform: translate(-50%, -50%);
     z-index: 3123;
+    @include media-breakpoint-up(md) {
+      top: 95%;
+    }
+    @include media-breakpoint-up(xl) {
+      top: 50%;
+    }
     &:hover {
       & svg path {
         fill: $brown-800;
@@ -24,11 +30,17 @@
     }
     &.slick-prev {
       transform: rotate(90deg);
-      left: -75px;
+      left: 50px;
+      @include media-breakpoint-up(xl) {
+        left: -75px;
+      }
     }
     &.slick-next {
       transform: rotate(-90deg);
-      right: -75px;
+      right: 50px;
+      @include media-breakpoint-up(xl) {
+        right: -75px;
+      }
     }
   }
 }

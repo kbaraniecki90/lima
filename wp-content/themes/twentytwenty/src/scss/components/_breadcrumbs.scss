@@ -2,13 +2,19 @@
   position: relative;
   margin-top: auto;
   padding-bottom: 2rem;
+  padding-left: 2rem;
   left: 50%;
   transform: translateX(-50%);
+  @include media-breakpoint-up(md) {
+    padding-left: 0;
+  }
   & * {
     color: $white;
     font-size: 2rem;
-    margin: 0 1rem;
     font-weight: bold;
     text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+      margin: 0 1rem;
+    }
   }
 }
