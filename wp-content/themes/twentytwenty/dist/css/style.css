@@ -8713,7 +8713,10 @@ a {
   .double-heading-right .long-text {
     width: 102%; }
   .double-heading-right .double-heading-subtitle {
-    font-size: 4.5rem; }
+    font-size: 3rem; }
+    @media (min-width: 768px) {
+      .double-heading-right .double-heading-subtitle {
+        font-size: 4.5rem; } }
     @media (min-width: 1600px) {
       .double-heading-right .double-heading-subtitle {
         font-size: 4.7rem; } }
@@ -8774,8 +8777,10 @@ html, body {
   .navbar-nav {
     justify-content: space-between; }
   .navbar .custom-logo-link {
-    display: block;
-    margin-right: 130px; }
+    display: block; }
+    @media (min-width: 768px) {
+      .navbar .custom-logo-link {
+        margin-right: 130px; } }
     .navbar .custom-logo-link img {
       width: auto;
       height: 46px; }
@@ -9086,21 +9091,33 @@ textarea.input-input {
 #breadcrumbs {
   position: relative;
   margin-top: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1.7rem;
   padding-left: 2rem;
   left: 50%;
   transform: translateX(-50%); }
+  #breadcrumbs a + .separator {
+    transform: rotate(90deg);
+    display: inline-block; }
+    @media (min-width: 768px) {
+      #breadcrumbs a + .separator {
+        display: inline; } }
   @media (min-width: 768px) {
     #breadcrumbs {
       padding-left: 0; } }
   #breadcrumbs * {
+    display: block;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
+    margin-bottom: -.5rem;
+    text-align: center;
     text-transform: uppercase; }
     @media (min-width: 768px) {
       #breadcrumbs * {
-        margin: 0 1rem; } }
+        display: inline;
+        font-size: 2rem;
+        margin: 0 1rem;
+        text-align: left; } }
 
 .featured-media {
   position: relative;
@@ -9152,14 +9169,14 @@ textarea.input-input {
   @media (min-width: 992px) {
     #realizations.nav.nav-tabs {
       flex-wrap: nowrap; } }
-  #realizations.nav.nav-tabs button {
+  #realizations.nav.nav-tabs button, #realizations.nav.nav-tabs a {
     padding: .5rem 2rem;
     background-color: #707070;
     color: white;
     font-weight: bold;
     transition: .3s ease;
     border: none; }
-    #realizations.nav.nav-tabs button.active {
+    #realizations.nav.nav-tabs button.active, #realizations.nav.nav-tabs a.active {
       background-color: #9e9785; }
   #realizations.nav.nav-tabs .nav-item.tab-item {
     width: 100%; }
@@ -9485,11 +9502,8 @@ article.realizacje {
       text-shadow: 0 0 25px rgba(0, 0, 0, 0.712); }
     .category-item img {
       width: 100%;
-      height: 300px;
+      height: 350px;
       object-fit: cover; }
-      @media (min-width: 768px) {
-        .category-item img {
-          height: 350px; } }
       @media (min-width: 992px) {
         .category-item img {
           height: 400px; } }
@@ -9690,10 +9704,7 @@ form.failed .wpcf7-response-output {
       font-size: 4rem; }
 
 .features-item {
-  height: 250px; }
-  @media (min-width: 768px) {
-    .features-item {
-      height: 300px; } }
+  height: 300px; }
 
 .features-title {
   font-size: 2rem;

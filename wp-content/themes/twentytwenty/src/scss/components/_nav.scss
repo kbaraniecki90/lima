@@ -29,7 +29,9 @@
   }
   & .custom-logo-link {
     display: block;
-    margin-right: 130px;
+    @include media-breakpoint-up(md) {
+      margin-right: 130px;
+    }
     & img {
       width: auto;
       height: 46px;

@@ -8,7 +8,7 @@
     @include media-breakpoint-up(lg) {
       flex-wrap: nowrap;
     }
-    & button {
+    & button, a {
       padding: .5rem 2rem;
       background-color: $primary;
       color: white;

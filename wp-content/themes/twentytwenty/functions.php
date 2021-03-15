@@ -46,6 +46,11 @@ function customcss_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'customcss_enqueue_scripts' );
 
+add_filter('wpseo_breadcrumb_separator', function($separator) {
+  $separator = "<span class='separator'>" . $separator . "</span>";
+  return $separator;
+});
+
 function twentytwenty_theme_support() {
 
 	// Add default posts and comments RSS feed links to head.

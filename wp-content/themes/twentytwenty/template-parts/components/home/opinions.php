@@ -65,9 +65,9 @@
           <div class="col-12 col-lg-6">
             <div class="double-heading double-heading-right mb-2">
               <span class="double-heading-subtitle long-text position-absolute end-0"><?= $opinionsTitle ?></span>
-              <h2 class="double-heading-title w-100 text-end"><?= $opinionsTitle ?></h2>
+              <h2 class="double-heading-title w-100 text-lg-end"><?= $opinionsTitle ?></h2>
             </div>
-            <p class="text-end">
+            <p class="text-lg-end">
               <?= $underOpinionTitle ?>
             </p>
           </div>

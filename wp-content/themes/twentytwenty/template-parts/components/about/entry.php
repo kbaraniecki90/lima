@@ -14,7 +14,7 @@
           <h1 class="double-heading-title"><?= $pageTitle ?></h1>
         </div>
       </div>
-      <div class="col-12 text-center mb-5 mb-lg-10">
+      <div class="col-12 text-lg-center mb-5 mb-lg-10">
 
         <?= $entryText ?>
       </div>

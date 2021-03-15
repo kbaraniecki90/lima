@@ -37,7 +37,10 @@ a {
       width: 102%;
     }
     .double-heading-subtitle {
-      font-size: 4.5rem;
+      font-size: 3rem;
+      @include media-breakpoint-up(md) {
+        font-size: 4.5rem;
+      }
       @media (min-width: 1600px) {
         font-size: 4.7rem;
       }
