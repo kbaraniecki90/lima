@@ -23,6 +23,9 @@
       left: 0;
       transform: translateX(-19%);
     }
+    @include media-breakpoint-up(xl) {
+      transform: translateX(-24%);
+    }
     &::after {
       content: '';
       position: absolute;

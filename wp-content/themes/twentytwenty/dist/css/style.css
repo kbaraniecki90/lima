@@ -8876,6 +8876,9 @@ html, body {
       width: 50vw;
       left: 0;
       transform: translateX(-19%); } }
+  @media (min-width: 1200px) {
+    .opinion-slider-inner-wrapper {
+      transform: translateX(-24%); } }
   .opinion-slider-inner-wrapper::after {
     content: '';
     position: absolute;
