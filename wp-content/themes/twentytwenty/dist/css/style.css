@@ -8819,7 +8819,7 @@ html, body {
     margin: 5rem auto 0; }
     @media (min-width: 992px) {
       .squared-images-big {
-        top: 0;
+        top: 8.22783vh;
         left: 100px;
         z-index: 3; } }
     .squared-images-big img {
@@ -9095,7 +9095,6 @@ textarea.input-input {
   position: relative;
   margin-top: auto;
   padding-bottom: 1.7rem;
-  padding-left: 2rem;
   left: 50%;
   transform: translateX(-50%); }
   #breadcrumbs a + .separator {
@@ -9104,9 +9103,6 @@ textarea.input-input {
     @media (min-width: 768px) {
       #breadcrumbs a + .separator {
         display: inline; } }
-  @media (min-width: 768px) {
-    #breadcrumbs {
-      padding-left: 0; } }
   #breadcrumbs * {
     display: block;
     color: #fff;
