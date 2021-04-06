@@ -9,7 +9,7 @@
 
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('h-100'); ?> id="post-<?php the_ID(); ?>">
 	<?php
 	// On the cover page template, output the cover header.
 	$cover_header_style   = '';
@@ -75,16 +75,7 @@
 		}
 		?>
 
-	</div><!-- .post-inner -->
+	</div>
 
-	<!-- < ?php
-
-	if ( is_single() ) {
-
-		get_template_part( 'template-parts/navigation' );
-	}
-
-	?> -->
-
-</article><!-- .post -->
+</article>
 

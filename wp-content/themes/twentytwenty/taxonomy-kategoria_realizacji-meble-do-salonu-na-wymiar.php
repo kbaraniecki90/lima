@@ -13,7 +13,7 @@ get_header();
 ?>
 <?= get_template_part( 'template-parts/components/entryPicture' ); ?>
 
-<section class="oppening">
+<section class="oppening  mb-2 mb-lg-3">
   <div class="container">
     <div class="row">
       <div class="col-12 mb-2">

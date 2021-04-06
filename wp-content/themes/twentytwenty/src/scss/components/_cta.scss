@@ -1,6 +1,8 @@
 .cta {
   position: relative;
   padding: 4rem 0;
+  background-size: cover;
+  background-position: center;
   @include media-breakpoint-up(lg) {
     padding: 8rem 0;
   }

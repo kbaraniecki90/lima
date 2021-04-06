@@ -6,7 +6,7 @@
     'hide_empty' => false,
   ));
 ?>
-<section class="oppening mb-2 mb-lg-9">
+<section class="oppening mb-2 mb-lg-3">
   <div class="container">
     <div class="row">
       <div class="col-12 mb-2">
