@@ -44,8 +44,15 @@
     & img {
       display: block;
       margin: 3rem 0;
-      max-width: 100%;
-      height: auto;
+      max-height: 350px;
+      width: auto;
+      @include media-breakpoint-up(md) {
+        max-height: 600px;
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: 100%;
+        max-height: 900px;
+      }
     }
     & div.gallery {
       & img {
