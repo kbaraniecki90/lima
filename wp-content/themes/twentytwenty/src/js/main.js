@@ -3,6 +3,7 @@ import '../../bootstrap/js/bootstrap.min.js'
 import '../scss/main.scss'
 import SoftImage from './modules/SoftImage'
 import navbarClosing from './modules/navbarClosing'
+import postModify from './modules/postModify'
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -41,4 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   navbarClosing()
+
+  if(document.querySelector('body.single-realizacje')) {
+    postModify()
+  }
 })

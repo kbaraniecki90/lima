@@ -7765,15 +7765,19 @@ article.realizacje {
     @media (min-width: 768px) {
       .post-template main img,
       .single-realizacje main img {
-        max-height: 600px; } }
+        max-height: 530px; } }
     @media (min-width: 1200px) {
       .post-template main img,
       .single-realizacje main img {
         max-width: 100%;
-        max-height: 900px; } }
-  .post-template main div.gallery img,
-  .single-realizacje main div.gallery img {
-    margin: 3rem auto; }
+        max-height: 600px;
+        object-fit: cover; } }
+  .post-template main div.gallery,
+  .single-realizacje main div.gallery {
+    max-height: 600px; }
+    .post-template main div.gallery img,
+    .single-realizacje main div.gallery img {
+      margin: 3rem auto; }
   .post-template main ul, .post-template main ol,
   .single-realizacje main ul,
   .single-realizacje main ol {

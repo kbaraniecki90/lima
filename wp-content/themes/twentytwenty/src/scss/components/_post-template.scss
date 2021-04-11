@@ -47,14 +47,16 @@
       max-height: 350px;
       width: auto;
       @include media-breakpoint-up(md) {
-        max-height: 600px;
+        max-height: 530px;
       }
       @include media-breakpoint-up(xl) {
         max-width: 100%;
-        max-height: 900px;
+        max-height: 600px;
+        object-fit: cover;
       }
     }
     & div.gallery {
+      max-height: 600px;
       & img {
         margin: 3rem auto;
       }

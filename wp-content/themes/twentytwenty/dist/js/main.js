@@ -5971,6 +5971,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_SoftImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/SoftImage */ "./wp-content/themes/twentytwenty/src/js/modules/SoftImage.js");
 /* harmony import */ var _modules_navbarClosing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/navbarClosing */ "./wp-content/themes/twentytwenty/src/js/modules/navbarClosing.js");
+/* harmony import */ var _modules_postModify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/postModify */ "./wp-content/themes/twentytwenty/src/js/modules/postModify.js");
+
 
 
 
@@ -6004,6 +6006,10 @@ document.addEventListener('DOMContentLoaded', function () {
     nextArrow: '<button class="slick-arrow slick-next"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/><path d="M12,4c4.41,0,8,3.59,8,8s-3.59,8-8,8s-8-3.59-8-8S7.59,4,12,4 M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10 c5.52,0,10-4.48,10-10C22,6.48,17.52,2,12,2L12,2z M13,12l0-4h-2l0,4H8l4,4l4-4H13z"/></g></svg></button>'
   });
   Object(_modules_navbarClosing__WEBPACK_IMPORTED_MODULE_4__["default"])();
+
+  if (document.querySelector('body.single-realizacje')) {
+    Object(_modules_postModify__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  }
 });
 
 /***/ }),
@@ -6059,6 +6065,28 @@ __webpack_require__.r(__webpack_exports__);
   const menu = document.querySelector('.navbar-collapse');
   const body = document.querySelector('body');
   body.addEventListener('click', () => menu.classList.contains('show') ? toggler.click() : '');
+});
+
+/***/ }),
+
+/***/ "./wp-content/themes/twentytwenty/src/js/modules/postModify.js":
+/*!*********************************************************************!*\
+  !*** ./wp-content/themes/twentytwenty/src/js/modules/postModify.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  let postInner = document.querySelector('.post-inner');
+  let entryContent = document.querySelector('.entry-content');
+  let gallery = document.querySelector('.gallery');
+  if (!gallery) return;
+  postInner.appendChild(gallery);
+  postInner.classList.add('row');
+  entryContent.classList.add('col-12', 'col-xl-5');
+  gallery.classList.add('col-12', 'col-xl-6', 'offset-xl-1');
 });
 
 /***/ }),

@@ -27,7 +27,7 @@
 
             <li class="nav-item tab-item mb-1 mb-lg-0" role="presentation">
               <button
-                class="nav-link w-100 <?= $k == 0 ? "active" : "" ?>"
+                class="nav-link w-100 <?= $k == 3 ? "active" : "" ?>"
                 id="<?= $k ?>-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#tab<?= $k ?>"
