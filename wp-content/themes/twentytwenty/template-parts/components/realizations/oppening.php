@@ -46,7 +46,7 @@
         <div class="tab-content " id="realizationsContent">
         <?php foreach ($terms as $k => $cat) : ?>
           <div
-            class="tab-pane fade <?= $k == 0 ? "show active" : "" ?>"
+            class="tab-pane fade <?= $k == 3 ? "show active" : "" ?>"
             id="tab<?= $k ?>"
             role="tabpanel"
             aria-labelledby="<?= $k ?>-tab"
