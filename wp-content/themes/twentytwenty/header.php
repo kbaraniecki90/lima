@@ -17,7 +17,7 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-
+    <meta name="google-site-verification" content="ShPD2SUfINJfovirbqZpphaKpWhwwFFiMN3Cxh14d8E" />
 		<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script
