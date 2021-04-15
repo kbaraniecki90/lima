@@ -1,15 +1,24 @@
-# Translation of WordPress - 5.6.x - Development - Administration - Network Admin in Polish
-# This file is distributed under the same license as the WordPress - 5.6.x - Development - Administration - Network Admin package.
+# Translation of WordPress - 5.7.x - Development - Administration - Network Admin in Polish
+# This file is distributed under the same license as the WordPress - 5.7.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-07-27 17:06:38+0000\n"
+"PO-Revision-Date: 2021-03-04 16:47:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: pl\n"
-"Project-Id-Version: WordPress - 5.6.x - Development - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 5.7.x - Development - Administration - Network Admin\n"
+
+#: wp-admin/network/settings.php:63
+msgid "<a href=\"https://wordpress.org/support/article/network-admin-settings-screen/\">Documentation on Network Settings</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/network-admin-settings-screen/\">Dokumentacja dotycząca ustawień sieci (en)</a>"
+
+#: wp-admin/network/site-info.php:184
+msgctxt "site"
+msgid "Public"
+msgstr "Publiczna"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:293
 msgctxt "site"
@@ -143,7 +152,7 @@ msgstr "Stała %s nie może zostać zdefiniowana w czasie tworzenia sieci."
 msgid "You are about to delete the following sites:"
 msgstr "Zamierzasz usunąć następujące witryny:"
 
-#: wp-admin/network/site-users.php:248
+#: wp-admin/network/site-users.php:243
 msgid "User could not be added to this site."
 msgstr "Użytkownik nie mógł zostać dodany do witryny. "
 
@@ -486,7 +495,7 @@ msgstr "Spam"
 msgid "Archived"
 msgstr "Zarchiwizowana"
 
-#: wp-admin/network/user-new.php:136 wp-admin/network/site-users.php:360
+#: wp-admin/network/user-new.php:136 wp-admin/network/site-users.php:355
 msgid "A password reset link will be sent to the user via email."
 msgstr "Link do zresetowania hasła zostanie wysłany do mailem."
 
@@ -602,10 +611,6 @@ msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Users_Screen\">Dokum
 msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Themes_Screen\">Documentation on Network Themes</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Themes_Screen\">Dokumentacja na temat Motywów w Sieci Witryn</a>"
 
-#: wp-admin/network/settings.php:63
-msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Settings_Screen\">Documentation on Network Settings</a>"
-msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Settings_Screen\">Dokumentacja na temat Ustawień Sieci Witryn</a>"
-
 #. translators: 1: Site URL, 2: Server error message.
 #: wp-admin/network/upgrade.php:98
 msgid "Warning! Problem updating %1$s. Your server may not be able to connect to sites running on it. Error message: %2$s"
@@ -690,7 +695,7 @@ msgstr "Aby poszukać witryny, <strong>wprowadź ścieżkę do niej lub jej dome
 
 #: wp-admin/network/index.php:42
 msgid "To search for a user, <strong>enter an email address or username</strong>. Use a wildcard to search for a partial username, such as user&#42;."
-msgstr "Aby poszukać użytkownika, <strong>wprowadź adres email lub nazwę tego użytkownika</strong>. Możesz użyć maski, aby wyszukać użytkowników o nazwach zawierających jakiś fragment, np. kowals&#42;."
+msgstr "Aby poszukać użytkownika, <strong>proszę wprowadzić adres e-mail lub nazwę użytkownika</strong>. Można użyć maski, aby wyszukać użytkowników o nazwach zawierających jakiś fragment, np. kowals&#42;."
 
 #: wp-admin/network/index.php:40
 msgid "To add a new site, <strong>click Create a New Site</strong>."
@@ -770,27 +775,27 @@ msgstr "Pozwól administratorom witryn dodawać nowych użytkowników do witryn 
 msgid "Super admins can no longer be added on the Options screen. You must now go to the list of existing users on Network Admin > Users and click on Username or the Edit action link below that name. This goes to an Edit User page where you can check a box to grant super admin privileges."
 msgstr "Uprawnienia superadministratora nie mogą już być nadawane na tym ekranie &mdash; teraz, aby to zrobić, należy przejść do listy istniejących kont (Administracja siecią &rarr; Użytkownicy) i kliknąć nazwę użytkownika lub znajdujący się pod nią odnośnik &#8222;Edytuj&#8221;. Spowoduje to przejście na ekran edycji konta, na którym możliwe jest nadanie tych uprawnień."
 
-#: wp-admin/network/site-users.php:269
+#: wp-admin/network/site-users.php:264
 msgid "Enter the username and email."
-msgstr "Wprowadź nazwę użytkownika oraz adres email."
+msgstr "Wprowadź nazwę oraz e-mail użytkownika."
 
-#: wp-admin/network/site-users.php:266
+#: wp-admin/network/site-users.php:261
 msgid "User created."
 msgstr "Konto zostało utworzone."
 
-#: wp-admin/network/site-users.php:263
+#: wp-admin/network/site-users.php:258
 msgid "Select a user to remove."
 msgstr "Wybierz użytkownika, którego konto chcesz usunąć."
 
-#: wp-admin/network/site-users.php:257
+#: wp-admin/network/site-users.php:252
 msgid "Select a user to change role."
 msgstr "Wybierz użytkownika, którego rolę chcesz zmienić."
 
-#: wp-admin/network/site-users.php:251
+#: wp-admin/network/site-users.php:246
 msgid "Enter the username of an existing user."
 msgstr "Wprowadź nazwę zarejestrowanego użytkownika."
 
-#: wp-admin/network/site-users.php:245
+#: wp-admin/network/site-users.php:240
 msgid "User is already a member of this site."
 msgstr "Ten użytkownik został już dodany do tej witryny."
 
@@ -864,7 +869,7 @@ msgid "Theme enabled."
 msgstr "Motyw został włączony."
 
 #. translators: %s: Site title.
-#: wp-admin/network/site-info.php:126 wp-admin/network/site-users.php:204
+#: wp-admin/network/site-info.php:126 wp-admin/network/site-users.php:199
 #: wp-admin/network/site-themes.php:170 wp-admin/network/site-settings.php:83
 msgid "Edit Site: %s"
 msgstr "Edytuj witrynę &#8222;%s&#8221;"
@@ -899,7 +904,7 @@ msgstr "Odnośnik &#8222;Edytuj&#8221; przenoszący na osobny ekran edycji witry
 msgid "Add New takes you to the Add New Site screen. You can search for a site by Name, ID number, or IP address. Screen Options allows you to choose how many sites to display on one page."
 msgstr "Kliknięcie przycisku &#8222;Dodaj nową&#8221; przeniesie Cię do ekranu dodawania nowej witryny. Możesz przeszukać witryny pod kątem nazwy, identyfikatora lub adresu IP. Karta &#8222;Opcje ekranu&#8221; pozwala na wybór ilości witryn wyświetlanych na jednej stronie."
 
-#: wp-admin/network/user-new.php:148 wp-admin/network/site-users.php:323
+#: wp-admin/network/user-new.php:148 wp-admin/network/site-users.php:318
 msgid "Add User"
 msgstr "Dodaj użytkownika"
 
@@ -909,7 +914,7 @@ msgstr "Nie można dodać użytkownika."
 
 #: wp-admin/network/user-new.php:22
 msgid "Add User will set up a new user account on the network and send that person an email with username and password."
-msgstr "Użycie funkcji &#8222;Dodaj użytkownika&#8221; spowoduje utworzenie nowego konta w sieci witryn i wysłanie na podany adres email wiadomości z nazwą użytkownika i hasłem."
+msgstr "Użycie funkcji &#8222;Dodaj użytkownika&#8221; spowoduje utworzenie nowego konta w sieci witryn i wysłanie na podany e-mail wiadomości z nazwą i hasłem użytkownika."
 
 #: wp-admin/network/menu.php:41
 msgid "Updates"
@@ -962,7 +967,7 @@ msgstr "Oryginalne kroki konfiguracyjne wyświetlone są w tym miejscu, by umoż
 
 #: wp-admin/includes/network.php:369
 msgid "Your email address."
-msgstr "Twój adres email."
+msgstr "Twój e-mail."
 
 #: wp-admin/includes/network.php:360
 msgid "What would you like to call your network?"
@@ -1090,7 +1095,7 @@ msgstr "Uwaga! Użytkownik nie mógł zostać usunięty. Użytkownik %s jest adm
 
 #: wp-admin/network/site-new.php:26
 msgid "If the admin email for the new site does not exist in the database, a new user will also be created."
-msgstr "Jeśli podany adres email nie istnieje jeszcze w bazie, utworzone zostanie również nowe konto użytkownika."
+msgstr "Jeśli podany e-mail nie istnieje jeszcze w bazie, utworzone zostanie również nowe konto."
 
 #: wp-admin/network/sites.php:38
 msgid "The site ID is used internally, and is not shown on the front end of the site or to users/viewers."
@@ -1106,11 +1111,11 @@ msgstr "Umieszczenie wskaźnika myszy nad dowolnym wierszem listy spowoduje wyś
 
 #: wp-admin/network/settings.php:51
 msgid "Operational settings has fields for the network&#8217;s name and admin email."
-msgstr "Sekcja &#8222;Ustawienia operacyjne&#8221; pozwala na zmianę nazwy sieci witryn i adresu email jej administratora."
+msgstr "Sekcja &#8222;Ustawienia operacyjne&#8221; pozwala na zmianę nazwy sieci witryn i e-maila administratora."
 
 #: wp-admin/network/users.php:223
 msgid "The bulk action will permanently delete selected users, or mark/unmark those selected as spam. Spam users will have posts removed and will be unable to sign up again with the same email addresses."
-msgstr "Przy pomocy menu masowych działań można usunąć konta użytkowników na zawsze lub oznaczyć użytkowników jako spamerów/cofnąć oznaczenie ich jako spamerów. Wpisy użytkowników, którzy zostaną oznaczeni jako spamerzy, zostaną usunięte i nie będą oni mogli zarejestrować się ponownie przy użyciu tego samego adresu email."
+msgstr "Przy pomocy menu masowych działań można usunąć konta użytkowników na zawsze lub oznaczyć użytkowników jako spamerów/cofnąć oznaczenie ich jako spamerów. Wpisy użytkowników, którzy zostaną oznaczeni jako spamerzy, zostaną usunięte i nie będą oni mogli zarejestrować się ponownie przy użyciu tego samego e-maila."
 
 #: wp-admin/network/users.php:221
 msgid "You can also go to the user&#8217;s profile page by clicking on the individual username."
@@ -1166,7 +1171,7 @@ msgstr "W sekcji &#8222;Ustawienia menu&#8221; możliwe jest włączenie/wyłąc
 
 #: wp-admin/network/settings.php:53
 msgid "New site settings are defaults applied when a new site is created in the network. These include welcome email for when a new site or user account is registered, and what&#8127;s put in the first post, page, comment, comment author, and comment URL."
-msgstr "Ustawienia dla nowych witryn są domyślnymi ustawieniami, nadawanymi nowoutworzonym witrynom sieci. Składają się na nie: powitalny email wysyłany przy rejestracji nowej witryny lub nowego konta oraz treść pierwszego wpisu, pierwszej strony, pierwszego komentarza, nazwa jego autora i adres witryny jego autora."
+msgstr "Ustawienia dla nowych witryn są domyślnymi ustawieniami, nadawanymi nowo tworzonym witrynom sieci. Składają się na nie: powitalny e-mail wysyłany przy rejestracji nowej witryny lub nowego konta oraz treść pierwszego wpisu, pierwszej strony, pierwszego komentarza, nazwa jego autora i adres witryny jego autora."
 
 #: wp-admin/network/settings.php:52
 msgid "Registration settings can disable/enable public signups. If you let others sign up for a site, install spam plugins. Spaces, not commas, should separate names banned as sites for this network."
@@ -1312,11 +1317,11 @@ msgstr "Włącz administracyjne menu"
 
 #: wp-admin/network/settings.php:371
 msgid "Upload Settings"
-msgstr "Ustawienia dot. wysyłania na serwer"
+msgstr "Ustawienie przesyłania"
 
 #: wp-admin/network/settings.php:290
 msgid "New Site Settings"
-msgstr "Ustawienia dot. nowych witryn"
+msgstr "Ustawienia nowej witryny"
 
 #: wp-admin/network/settings.php:190
 msgid "Registration Settings"
@@ -1328,7 +1333,7 @@ msgstr "Ustawienia operacyjne"
 
 #: wp-admin/network/site-new.php:91
 msgid "Missing email address."
-msgstr "Adres email nie został podany."
+msgstr "E-mail nie został podany."
 
 #: wp-admin/network/site-new.php:87
 msgid "Missing or invalid site address."
@@ -1344,7 +1349,7 @@ msgstr "Przydzielana przestrzeń dyskowa"
 
 #: wp-admin/network/settings.php:299
 msgid "The welcome email sent to new site owners."
-msgstr "Email wysyłany do nowych właścicieli witryn."
+msgstr "E-mail wysyłany do nowych właścicieli witryn."
 
 #: wp-admin/network/settings.php:247
 msgid "Users are not allowed to register these sites. Separate names by spaces."
@@ -1356,15 +1361,15 @@ msgstr "Za każdym razem, gdy ktoś zarejestruje witrynę lub użytkownika wyśl
 
 #: wp-admin/includes/network.php:365 wp-admin/network/settings.php:160
 msgid "Network Admin Email"
-msgstr "Adres email administratora sieci witryn"
+msgstr "E-mail administratora sieci witryn"
 
 #: wp-admin/network/site-new.php:263
 msgid "A new user will be created if the above email address is not in the database."
-msgstr "Jeśli wprowadzony adres email nie znajduje się jeszcze w bazie danych, zostanie utworzone nowe konto."
+msgstr "Jeśli wprowadzony e-mail nie znajduje się jeszcze w bazie danych, zostanie utworzone nowe konto."
 
 #: wp-admin/network/site-new.php:259
 msgid "Admin Email"
-msgstr "Email administratora"
+msgstr "E-mail administratora"
 
 #: wp-admin/network/site-new.php:275
 msgid "Add Site"
@@ -1396,23 +1401,23 @@ msgstr "Pierwsza strona"
 
 #: wp-admin/network/settings.php:309
 msgid "The welcome email sent to new users."
-msgstr "Email wysyłany do nowych użytkowników."
+msgstr "Wiadomość wysyłana do nowych użytkowników."
 
 #: wp-admin/network/settings.php:304
 msgid "Welcome User Email"
-msgstr "Email witający użytkownika"
+msgstr "Wiadomość witająca użytkownika"
 
 #: wp-admin/network/settings.php:294
 msgid "Welcome Email"
-msgstr "Email witający administratora witryny"
+msgstr "Wiadomość powitalna"
 
 #: wp-admin/network/settings.php:272
 msgid "Banned Email Domains"
-msgstr "Zablokowane domeny adresów email"
+msgstr "Zablokowane domeny e-maili"
 
 #: wp-admin/network/settings.php:253
 msgid "Limited Email Registrations"
-msgstr "Dozwolone domeny adresów email"
+msgstr "Dozwolone domeny e-maili"
 
 #: wp-admin/network/settings.php:243
 msgid "Banned Names"
@@ -1430,9 +1435,9 @@ msgstr "Powiadomienie o rejestracji"
 msgid "Allow new registrations"
 msgstr "Możliwość rejestracji"
 
-#: wp-admin/network/site-users.php:272
+#: wp-admin/network/site-users.php:267
 msgid "Duplicated username or email address."
-msgstr "Nazwa użytkownika lub email już istnieje."
+msgstr "Nazwa użytkownika lub e-mail już istnieje."
 
 #: wp-admin/network/user-new.php:41
 msgid "Cannot create an empty user."
