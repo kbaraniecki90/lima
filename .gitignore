@@ -1,20 +1,55 @@
-*.log
-.htaccess
-sitemap.xml
-sitemap.xml.gz
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-# wp-content/uploads/
-wp-content/wp-cache-config.php
-wp-content/updraft/
+# ignore "wp-content" directory + exceptions:
+wp-content/languages/
+wp-content/themes/
+wp-content/uploads/
+wp-content/plugins/*
+!wp-content/mu-plugins/
 
-node_modules
+
+# ignore temporary files
+.data
+theme/build
+.DS_Store
+.idea/
+
+# ignore default plugins
+wp-content/plugins/hello.php
+wp-content/plugins/akismet
+
+# ignore node dependency directories
+node_modules/
 package-lock.json
+yarn.lock
 
+# ignore secret files
+.maintenance
+wordfence-waf.php
+wp-config.php
+/.git/config
+.secrets
+/.ssh
+.ssh
 
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
 
+# ignore misc files
+/*.rar
+/*.zip
+/*.tar
+/*.tar.gz
+/*.gz
+
+# ignore deployment files
+/.git/config
+/.htaccess
+/index.php
+/license.txt
+/readme.html
+/robots.txt
+/wp-admin/*
+/wp-includes/*
+/wp-*.php
+/xmlrpc.php

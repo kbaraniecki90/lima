@@ -1,0 +1,57 @@
+version: "3.9"
+services:
+
+  db:
+    image: mysql:8.0
+    container_name: limameble_db
+    volumes:
+      - "./.data/db:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:6.2.2-apache
+    container_name: limameble_wordpress
+    volumes:
+      - "./theme:/var/www/html/wp-content/themes/limameble-theme:cached"
+      - "./theme-plugin:/var/www/html/wp-content/plugins/theme-support-plugin:cached"
+      - "./wp-content/plugins:/var/www/html/wp-content/plugins:cached"
+      - "./wp-content/uploads:/var/www/html/wp-content/uploads:cached"
+      - "./wp-content/languages:/var/www/html/wp-content/languages:cached"
+      - "./users.ini:/usr/local/etc/php/conf.d/users.ini"
+
+    links:
+      - db
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      LOCALHOST: 1
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+
+        define( 'WP_MEMORY_LIMIT', '256M' );
+        define( 'WP_POST_REVISIONS', false );
+        define( 'WP_DEFAULT_THEME', 'limameble-theme' );
+        define( 'WP_DEBUG_DISPLAY', true );
+        define( 'ALLOW_UNFILTERED_UPLOADS', true);
+        define( 'WP_CACHE', false );
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: limameble_phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 300M
+    ports:
+      - '8002:80'
