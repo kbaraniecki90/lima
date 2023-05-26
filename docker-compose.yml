@@ -1,6 +1,5 @@
 version: "3.9"
 services:
-
   db:
     image: mysql:8.0
     container_name: limameble_db
@@ -18,7 +17,7 @@ services:
     image: wordpress:6.2.2-apache
     container_name: limameble_wordpress
     volumes:
-      - "./theme:/var/www/html/wp-content/themes/limameble-theme:cached"
+      - "./theme:/var/www/html/wp-content/themes/twentytwenty:cached"
       - "./theme-plugin:/var/www/html/wp-content/plugins/theme-support-plugin:cached"
       - "./wp-content/plugins:/var/www/html/wp-content/plugins:cached"
       - "./wp-content/uploads:/var/www/html/wp-content/uploads:cached"
@@ -39,7 +38,7 @@ services:
 
         define( 'WP_MEMORY_LIMIT', '256M' );
         define( 'WP_POST_REVISIONS', false );
-        define( 'WP_DEFAULT_THEME', 'limameble-theme' );
+        define( 'WP_DEFAULT_THEME', 'twentytwenty' );
         define( 'WP_DEBUG_DISPLAY', true );
         define( 'ALLOW_UNFILTERED_UPLOADS', true);
         define( 'WP_CACHE', false );
@@ -54,4 +53,4 @@ services:
       PMA_PORT: 3306
       UPLOAD_LIMIT: 300M
     ports:
-      - '8002:80'
+      - "8002:80"

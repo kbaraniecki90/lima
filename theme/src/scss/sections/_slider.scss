@@ -1,0 +1,137 @@
+.slider {
+  margin-bottom: 5rem;
+  @include media-breakpoint-up (lg) {
+    margin-bottom: 13.2rem;
+  }
+  &-inner-wrapper {
+    position: relative;
+    height: 100vh;
+    @media (min-width: 1600px) {
+      height: 803px;
+    }
+ 
+  }
+  &-item {
+    height: 100%;
+    z-index: 2;
+    & img {
+      object-fit: cover;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(112,112,112,0.6) 0%, rgba(0,0,0,0.48) 60%, rgba(255,255,255,1) 100%);
+      z-index: 1;
+    }
+  }
+  &-text-wrapper {
+    z-index: 2;
+    bottom: 20rem;
+    @include media-breakpoint-up(md) {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    @include media-breakpoint-up(lg) {
+      top: 100px;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, 50%);
+    }
+    @include media-breakpoint-up(xl) {
+      bottom: 1.25rem;
+      transform: translateX(-50%);
+    }
+    & .site-logo {
+      margin-bottom: 7rem;
+      @include media-breakpoint-up (xl) {
+        margin-bottom: 15rem;
+      }
+    }
+  }
+  & .double-heading {
+    & * {
+      color: white;
+    }
+    &-title {
+      font-weight: normal;
+      font-size: 4rem;
+
+      @include media-breakpoint-up (lg) {
+        font-size: 5rem;
+      }
+    }
+    &-subtitle {
+      font-size: 3.6rem;
+      @include media-breakpoint-up (lg) {
+        font-size: 5.6rem;
+      }
+    }
+  }
+}
+.carousel-control {
+  position: relative;
+  z-index: 2;
+  width: auto;
+}
+.indicators {
+  position: relative;
+  z-index: 3;
+  margin: 0 2rem;
+  &-wrapper {
+    margin-top: 4.2rem;
+    @media (min-width: 1600px) {
+      margin-top: 12.2rem;
+    }
+    & .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='707070'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    & .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='707070'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+  }
+  & li {
+    width: 20px;
+    height: 20px;
+    background-color: $primary;
+    border-radius: 50%;
+    opacity: .4;
+    border: none;
+    margin-top: 0;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+.pagination-wrapper {
+  width: 100%;
+  align-items: center;
+
+  position: absolute;
+  bottom: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  @include media-breakpoint-up (lg) {
+    width: 1194px;
+    padding-left: 10rem;
+    align-items: flex-start;
+  }
+  & .pagination-button {
+    @include media-breakpoint-up (lg) {
+      margin-left: auto;
+      margin-right: 11rem;
+    }
+  }
+}

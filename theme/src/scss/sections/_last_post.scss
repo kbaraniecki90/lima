@@ -1,0 +1,42 @@
+.last-post {
+  margin-bottom: 4rem;
+  @include media-breakpoint-up (xl) {
+    margin-bottom: 10rem;
+  }
+  & img {
+    width: 100%;
+  }
+  &-date {
+    font-size: 1.28rem;
+    font-family: $secondaryFont;
+  }
+  &-intro-text {
+    line-height: 2rem;
+  }
+  &-svg {
+    position: absolute;
+    content: '';
+    top: 50px;
+    right: 60px;
+    @include media-breakpoint-only(lg) {
+      top: 30px;
+    }
+  }
+  &-content {
+    position: relative;
+    padding-top: 10rem;
+    @include media-breakpoint-only(lg) {
+      padding-top: 2rem;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      top: 70px;
+      right: 140px;
+      width: 500px;
+      height: 2px;
+      background-color: #DDE0EB;
+      z-index: 3;
+    }
+  }
+}

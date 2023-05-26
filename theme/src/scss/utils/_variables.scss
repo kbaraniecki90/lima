@@ -1,0 +1,45 @@
+$primaryFont: 'Source Sans Pro', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+$primary: #707070;
+$black: #000000;
+
+$purple-400: #757e9e;
+
+$brown-800: #9e9785;
+
+$input-btn-padding-x: 3.1rem;
+$input-btn-padding-y: 1rem;
+
+$input-btn-font-size: 1.6rem;
+
+$box-shadow: 0 2px 6px rgba($black, .4);
+$box-shadow-sm: -6px 4px 12px rgba($black, .2);
+$box-shadow-lg: -4px 6px 10px rgba($black, .31);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1194px
+) !default;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 9,
+  10: $spacer * 10,
+);
+
+$grid-gutter-width: 3rem;
+
+$border-radius: 6px;

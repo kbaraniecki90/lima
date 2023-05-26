@@ -1,0 +1,57 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba($primary, .8);
+  box-shadow: 0 2px 6px rgba($black, .4);
+  padding: 1rem 0;
+  z-index: 5000;
+  &.navbar-light {
+    & .nav-link {
+      color: $white;
+    }
+    .navbar-toggler {
+      color: white;
+      border-color: white;
+      background-color: rgba(255, 255, 255, 0.3);
+      &:focus {
+        box-shadow: none;
+      }
+      @include transition;
+      &:not(.collapsed) {
+        background-color: white;
+      }
+    }
+  }
+  &-nav {
+    justify-content: space-between;
+  }
+  & .custom-logo-link {
+    display: block;
+    @include media-breakpoint-up(md) {
+      margin-right: 130px;
+    }
+    & img {
+      width: auto;
+      height: 40px;
+    }
+  }
+  & .nav-link {
+    position: relative;
+    font-size: 2rem;
+    line-height: 3.6rem;
+    letter-spacing: -0.001em;
+    font-weight: normal;
+    text-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    @include transition;
+    @include media-breakpoint-up(lg) {
+      text-shadow: none;
+    }
+    @include media-breakpoint-up(xl) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
