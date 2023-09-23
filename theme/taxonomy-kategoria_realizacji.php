@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying single posts and pages.
+ * The template for displaying taxonomy archive pages for kategoria_realizacji.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -11,6 +11,7 @@
 
 get_header();
 ?>
+
 <?= get_template_part( 'template-parts/components/entryPicture' ); ?>
 
 <section class="oppening  mb-2 mb-lg-3">
@@ -18,26 +19,30 @@ get_header();
     <div class="row">
       <div class="col-12 mb-2">
         <div class="double-heading">
-          <span class="double-heading-subtitle position-absolute"><?= 'Szafy wnękowe na wymiar' ?></span>
-          <h1 class="double-heading-title"><?= 'Szafy wnękowe na wymiar' ?></h1>
+          <span class="double-heading-subtitle position-absolute"><?= single_term_title('', false) ?></span>
+          <h1 class="double-heading-title"><?= single_term_title('', false) ?></h1>
         </div>
       </div>
     </div>
   </div>
 </section>
 <section>
-<div class="container">
+<div class="container mb-5">
     <div class="row">
         <?php 
           wp_reset_query();
-          $args = array('post_type' => 'realizacje',
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          $args = array(
+              'post_type' => 'realizacje',
               'tax_query' => array(
                   array(
                       'taxonomy' => 'kategoria_realizacji',
                       'field' => 'slug',
-                      'terms' => 'szafy-wnekowe-na-wymiar',
+                      'terms' => get_queried_object()->slug, 
                   ),
               ),
+              'paged' => $paged,
+              'posts_per_page' => 12,
           );
           $loop = new WP_Query($args);
           if($loop->have_posts()) {
@@ -45,6 +50,12 @@ get_header();
             while($loop->have_posts()) : $loop->the_post();
               get_template_part( 'template-parts/content' );
             endwhile;
+
+
+            echo '<div class="pagination blog">';
+            get_template_part('template-parts/pagination');
+            echo '</div>';
+            
           } else {
             echo '<h2>Nie ma realizacji w tej kategorii</h2>';
           }
