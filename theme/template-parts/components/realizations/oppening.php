@@ -45,41 +45,44 @@
         <div id="xyz"></div>
         <div class="tab-content " id="realizationsContent">
         <?php foreach ($terms as $k => $cat) : ?>
-          <div
-            class="tab-pane fade <?= $k == 3 ? "show active" : "" ?>"
-            id="tab<?= $k ?>"
-            role="tabpanel"
-            aria-labelledby="<?= $k ?>-tab"
-          >
-          <div class="row">
-
+    <div
+        class="tab-pane fade <?= $k == 3 ? "show active" : "" ?>"
+        id="tab<?= $k ?>"
+        role="tabpanel"
+        aria-labelledby="<?= $k ?>-tab"
+    >
+        <div class="row">
             <?php 
-              wp_reset_query();
-              $args = array('post_type' => 'realizacje',
-                  'tax_query' => array(
-                      array(
-                          'taxonomy' => 'kategoria_realizacji',
-                          'field' => 'slug',
-                          'terms' => $cat->slug,
-                      ),
-                  ),
-              );
-              $loop = new WP_Query($args);
-              if($loop->have_posts()) {
-
+            wp_reset_query();
+            $args = array(
+                'post_type' => 'realizacje',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'kategoria_realizacji',
+                        'field' => 'slug',
+                        'terms' => $cat->slug,
+                    ),
+                ),
+            );
+            $loop = new WP_Query($args);
+            if($loop->have_posts()) {
                 while($loop->have_posts()) : $loop->the_post();
-                  get_template_part( 'template-parts/content' );
+                    get_template_part( 'template-parts/content' );
                 endwhile;
-              } else {
+            } else {
                 echo '<h2>Nie ma realizacji w tej kategorii</h2>';
-              }
+            }
             ?>
-          </div>
+        </div>
 
-          </div>
-        <?php endforeach; ?>
+        <div class="text-center mt-3">
+            <a href="<?php echo get_term_link($cat); ?>" class="btn btn-primary pagination-button rounded-0 shadow">Zobacz więcej</a>
+        </div>
+    </div>
+<?php endforeach; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+
