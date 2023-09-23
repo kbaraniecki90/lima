@@ -51,10 +51,11 @@ get_header();
               get_template_part( 'template-parts/content' );
             endwhile;
 
-
-            echo '<div class="pagination blog">';
-            get_template_part('template-parts/pagination');
-            echo '</div>';
+            if ($loop->max_num_pages > 1) {
+              echo '<div class="pagination blog">';
+              get_template_part('template-parts/pagination');
+              echo '</div>';
+            }
             
           } else {
             echo '<h2>Nie ma realizacji w tej kategorii</h2>';
