@@ -29,7 +29,7 @@
  * @param bool    $echo Echo or return the HTML.
  * @return string Compiled HTML based on our arguments.
  */
-function twentytwenty_site_logo( $args = array(), $echo = true ) {
+function twentytwenty_site_logo( $args = array(), $echo = true, $image_width = 121, $image_height = 40 ) {
 	$logo       = get_custom_logo();
 	$site_title = get_bloginfo( 'name' );
 	$contents   = '';
@@ -56,8 +56,16 @@ function twentytwenty_site_logo( $args = array(), $echo = true ) {
 	$args = apply_filters( 'twentytwenty_site_logo_args', $args, $defaults );
 
 	if ( has_custom_logo() ) {
-		$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) );
+		$logo = sprintf('<a href="/" rel="home" class="custom-logo-link"><img width="%d" height="%d" src="%s" class="custom-logo" alt="%s" decoding="async"></a>',
+			$image_width,
+			$image_height,
+			wp_get_attachment_image_url(get_theme_mod('custom_logo'), 'full'),
+			esc_attr(get_bloginfo('name'))
+		);
+		$contents = sprintf($args['logo'], $logo, esc_html($site_title));
 		$classname = $args['logo_class'];
+
+		$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) );
 	} else {
 		$contents  = sprintf( $args['title'], esc_url( get_home_url( null, '/' ) ), esc_html( $site_title ) );
 		$classname = $args['title_class'];
