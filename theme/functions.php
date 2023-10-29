@@ -85,7 +85,7 @@ function twentytwenty_theme_support() {
 
 	// Add custom image size used in Cover Template.
 	add_image_size( 'twentytwenty-fullscreen', 1980, 9999 );
-
+	add_image_size( '510', 510, 510);
 
 	// If the retina setting is active, double the recommended width and height.
 
