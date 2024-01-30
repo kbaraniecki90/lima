@@ -20,12 +20,12 @@
     <meta name="google-site-verification" content="ShPD2SUfINJfovirbqZpphaKpWhwwFFiMN3Cxh14d8E" />
 	<meta name="google-site-verification" content="UJiPzJ3vpyIQl8_Plneowu4wJerxl8pKvOvIMHfLZzI" />
 		<link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script
+    <script defer
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer
+	 type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 	<!-- Facebook Pixel Code -->
