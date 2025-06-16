@@ -5,3 +5,30 @@ Theme Name: Limameble
 .wpcf7 form.sent{
 	color: white;
 }
+
+.sm-panel {position: fixed;width: 155px;top: 150px;right: -105px;z-index: 1000000;transition: visibility .25s, opacity .25s}
+.sm-panel>ul {margin: 0;padding: 0;list-style-type: none}
+.sm-panel>ul>li {transition: transform .25s}
+.sm-panel>ul>li:hover {transform: translateX(-105px)}
+.sm-panel>ul>li>a {display: flex;align-items: center;color: #fff;padding: 5px 0 5px 5px;text-decoration: none}
+.sm-panel>ul>li>a>img {margin: 0 10px 0 0}
+.sm-panel>ul>li>a>span {font-size: initial}
+.sm-panel>ul>li[class^="sm-"] {background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0%}
+.sm-text-black {color: #000}
+.sm-fb {background:#1977f3}
+.sm-twitter {background:#fff}
+.sm-gmap {background:#333}
+.sm-blog {background:#0171bb}
+.sm-pinterest {background:#d73532}
+.sm-youtube {background:#e32c26}
+.sm-allegro {background:#ff5a00}
+.sm-linkedin {background:#0097bd}
+.sm-payback {background:#00349a}
+.sm-olx {background:#002f34}
+.sm-instagram {background:#eee}
+.sm-pyszne {background:#ff8000}
+.sm-tiktok {background:#fff}
+.sm-booksy {background:#f9e5bc}
+/* ukrywanie socjalek a mobilce
+@media screen and (max-width:640px) {.sm-panel {visibility:hidden; opacity:0}}
+*/

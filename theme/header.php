@@ -14,7 +14,7 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 	<head>
-
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="3a9bec9e-fdde-4fe4-9dc4-4f987aec9191" data-blockingmode="auto" type="text/javascript"></script>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta name="google-site-verification" content="ShPD2SUfINJfovirbqZpphaKpWhwwFFiMN3Cxh14d8E" />
@@ -24,8 +24,7 @@
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
-    <script defer
-	 type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 	<!-- Facebook Pixel Code -->
@@ -47,18 +46,34 @@
 	&noscript=1"/>
 	</noscript>
 	<!-- End Facebook Pixel Code -->
+	<!-- Google tag (gtag.js) --> 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-446017013"></script> 
+		<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-446017013'); </script>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y59CWMLEKK"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-Y59CWMLEKK');
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y59CWMLEKK">
 	</script>
-	<!-- End Google tag -->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-Y59CWMLEKK');
+	</script>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-54V37BK');</script>
+<!-- End Google Tag Manager -->
+	
 	</head>
 	<body <?php body_class(); ?>>
+		
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54V37BK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <?php
   wp_body_open();

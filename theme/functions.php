@@ -763,3 +763,7 @@ function twentytwenty_get_elements_array() {
 	*/
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+add_action('wpseo_add_opengraph_tags', function() {
+    echo '<meta property="og:image" content="https://limameble.pl/wp-content/uploads/2021/09/email-limameble-logo.jpg" />';
+}, 20);
